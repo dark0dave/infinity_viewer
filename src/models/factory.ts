@@ -1,7 +1,7 @@
-import cre_parser from "./cre";
+import { parser as cre_parser } from "./cre";
 import fs from "fs";
 
-const model_factory = (name: String) => {
+const model_factory = (name: String): any => {
   switch (name) {
     case "cre":
       return cre_parser;
@@ -11,17 +11,21 @@ const model_factory = (name: String) => {
   }
 };
 
+const getFileBuffer = (path: fs.PathLike) => {
+  return fs.readFileSync(path);
+};
+
 const factory = (path: fs.PathLike) => {
-  const buffer = fs.accessSync(path);
-  const extention =
+  const buffer = getFileBuffer(path);
+  const extension =
     path
       .toString()
       .substring(
         path.toString().lastIndexOf(".") + 1,
         path.toString().length,
       ) || path.toString();
-  const parser = model_factory(extention);
-  return parser(buffer);
+  const parser = model_factory(extension);
+  return parser.parse(buffer);
 };
 
 export default factory;

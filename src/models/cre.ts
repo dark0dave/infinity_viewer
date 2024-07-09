@@ -245,7 +245,7 @@ const item_slots_parser = new Parser()
   .int16le("weapon_slot_selected")
   .int16le("weapon_ability_selected");
 
-const cre_parser = creature_parser
+const parser = creature_parser
   .array("known_spells", {
     type: known_spells_parser,
     length: "count_of_known_spells",
@@ -271,4 +271,4 @@ const cre_parser = creature_parser
     readUntil: "eof",
   });
 
-export default cre_parser;
+export { parser };

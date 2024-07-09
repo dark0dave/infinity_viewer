@@ -1,9 +1,7 @@
 import * as vscode from "vscode";
 import { InfinityProvider } from "./ui/infinityProvider";
 
-const ie_types_supported = ["cre"];
-
-export function activate(context: vscode.ExtensionContext) {
+export async function activate(context: vscode.ExtensionContext) {
   const extensionRoot = vscode.Uri.file(context.extensionPath);
   // Register our custom editor provider
   const provider = new InfinityProvider(extensionRoot);
@@ -22,4 +20,4 @@ export function activate(context: vscode.ExtensionContext) {
   );
 }
 
-export function deactivate() {}
+export async function deactivate() {}
