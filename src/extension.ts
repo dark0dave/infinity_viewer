@@ -1,5 +1,5 @@
 import * as vscode from "vscode";
-import {InfinityProvider} from "./ui/infinityProvider"
+import { InfinityProvider } from "./ui/infinityProvider";
 
 const ie_types_supported = ["cre"];
 
@@ -17,8 +17,8 @@ export function activate(context: vscode.ExtensionContext) {
           enableFindWidget: false,
           retainContextWhenHidden: true,
         },
-      }
-    )
+      },
+    ),
   );
 }
 

@@ -18,7 +18,7 @@
     "url": "https://github.com/dark0dave/infinity_viewer/issues"
   },
   "engines": {
-    "vscode": "^1.91.0"
+    "vscode": "^1.30.0"
   },
   "extensionKind": [
     "ui"
@@ -107,7 +107,7 @@
   "devDependencies": {
     "@types/mocha": "^10.0.7",
     "@types/node": "^20.14.10",
-    "@types/vscode": "^1.91.0",
+    "@types/vscode": "^1.30.0",
     "@vscode/test-cli": "^0.0.9",
     "@vscode/test-electron": "^2.4.0",
     "@vscode/vsce": "^2.29.0",

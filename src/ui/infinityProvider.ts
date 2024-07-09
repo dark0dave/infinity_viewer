@@ -1,8 +1,8 @@
-import * as vscode from 'vscode';
-import { InfinityPreview } from './infinityPreview';
+import * as vscode from "vscode";
+import { InfinityPreview } from "./infinityPreview";
 
 export class InfinityProvider implements vscode.CustomReadonlyEditorProvider {
-  public static readonly viewType = 'ie.preview';
+  public static readonly viewType = "ie.preview";
 
   private readonly _previews = new Set<InfinityPreview>();
   private _activePreview: InfinityPreview | undefined;
@@ -15,12 +15,12 @@ export class InfinityProvider implements vscode.CustomReadonlyEditorProvider {
 
   public async resolveCustomEditor(
     document: vscode.CustomDocument,
-    webviewEditor: vscode.WebviewPanel
+    webviewEditor: vscode.WebviewPanel,
   ): Promise<void> {
     const preview = new InfinityPreview(
       this.extensionRoot,
       document.uri,
-      webviewEditor
+      webviewEditor,
     );
     this._previews.add(preview);
     this.setActivePreview(preview);
