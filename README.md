@@ -16,5 +16,7 @@ lots
 - use mise to install latest node
 
 ```sh
-npm run build
+npm run package
 ```
+
+The vsix file can then be install to vscode/vscodium.
