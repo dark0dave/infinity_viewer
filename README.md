@@ -5,6 +5,7 @@ Is a vscode extension, to browse the binary files used by the infinity engine, p
 ## Current support
 
 - CRE files
+- ITM files
 
 ## Todo
 

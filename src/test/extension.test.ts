@@ -1,5 +1,5 @@
 import * as assert from "assert";
-import { parser as cre_parser } from "../models/cre";
+import cre_parser from "../models/cre";
 import * as fs from "fs";
 import * as vscode from "vscode";
 
@@ -11,7 +11,7 @@ suite("Extension Test Suite", () => {
   );
 
   test("Creature Tests", () => {
-    assert.equal(
+    assert.strictEqual(
       JSON.stringify(cre_parser.parse(cre_file)),
       JSON.stringify(cre_file_json),
     );

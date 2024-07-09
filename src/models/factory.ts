@@ -1,22 +1,21 @@
-import { parser as cre_parser } from "./cre";
+import cre_parser from "./cre";
+import itm_parser from "./itm";
 import fs from "fs";
+import { Parser } from "binary-parser";
 
-const model_factory = (name: String): any => {
-  switch (name) {
+const model_factory = (extension: String): Parser => {
+  switch (extension) {
     case "cre":
       return cre_parser;
+    case "itm":
+      return itm_parser;
     default:
-      console.log("Not Supported");
-      return;
+      throw "Not Supported";
   }
 };
 
-const getFileBuffer = (path: fs.PathLike) => {
-  return fs.readFileSync(path);
-};
-
-const factory = (path: fs.PathLike) => {
-  const buffer = getFileBuffer(path);
+const factory = (path: fs.PathLike): String => {
+  const buffer = fs.readFileSync(path);
   const extension =
     path
       .toString()

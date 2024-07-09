@@ -1,11 +1,7 @@
-const { Parser } = require("binary-parser");
+import header_parser from "./header";
+import { Parser } from "binary-parser";
 
-const header_parser = new Parser()
-  .endianness("little")
-  .string("signature", { length: 4, stripNull: true })
-  .string("version", { length: 4, stripNull: true });
-
-const creature_parser = header_parser
+const creature_parser = header_parser()
   .uint32("long_creature_name")
   .uint32("short_creature_name")
   .uint32("flags")
@@ -271,4 +267,4 @@ const parser = creature_parser
     readUntil: "eof",
   });
 
-export { parser };
+export default parser;
