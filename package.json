@@ -54,9 +54,11 @@
     }
   },
   "scripts": {
+    "build": "tsc -p ./",
     "compile": "tsc -p ./",
     "vscode:prepublish": "npm run compile",
-    "build": "vsce package",
+    "package": "vsce package",
+    "test": "vscode-test",
     "watch": "tsc -watch -p ./",
     "lint": "prettier -w src"
   },
@@ -68,7 +70,7 @@
     "@types/node": "^20.14.10",
     "@types/vscode": "^1.30.0",
     "@vscode/test-cli": "^0.0.9",
-    "@vscode/test-electron": "^2.4.0",
+    "@vscode/test-electron": "^2.4.1",
     "@vscode/vsce": "^2.29.0",
     "prettier": "^3.3.2",
     "typescript": "^5.5.3"
