@@ -1,6 +1,6 @@
 # Infinity Viewer
 
-![](icon.png)
+![](large_icon.png)
 
 Is a vscode extension, to browse the binary files used by the infinity engine, primary focused on the BGEE(1,2) games.
 
