@@ -1,15 +1,19 @@
 import * as assert from "assert";
-
-// You can import and use all API from the 'vscode' module
-// as well as import your extension to test it
+import { parser as cre_parser } from "../models/cre";
+import * as fs from "fs";
 import * as vscode from "vscode";
-// import * as myExtension from '../../extension';
 
 suite("Extension Test Suite", () => {
   vscode.window.showInformationMessage("Start all tests.");
+  const cre_file = fs.readFileSync("./fixtures/cutmelis.cre");
+  const cre_file_json = JSON.parse(
+    fs.readFileSync("./fixtures/cutmelis.cre.json", "utf8").trim(),
+  );
 
-  test("Sample test", () => {
-    assert.strictEqual(-1, [1, 2, 3].indexOf(5));
-    assert.strictEqual(-1, [1, 2, 3].indexOf(0));
+  test("Creature Tests", () => {
+    assert.equal(
+      JSON.stringify(cre_parser.parse(cre_file)),
+      JSON.stringify(cre_file_json),
+    );
   });
 });
