@@ -22,7 +22,7 @@ repos:
       - id: forbid-binary
         exclude: >
           (?x)^(
-            fixtures/.*
+            fixtures/.*| icon.png
           )$
       - id: git-dirty
         stages: [pre-commit]
