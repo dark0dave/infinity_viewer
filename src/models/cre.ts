@@ -245,25 +245,31 @@ const parser = creature_parser
   .array("known_spells", {
     type: known_spells_parser,
     length: "count_of_known_spells",
+    offset: "offset_to_known_spells",
   })
   .array("spell_memorization_info", {
     type: spell_memorization_info_parser,
     length: "count_of_spell_memorization_info",
+    offset: "offset_to_spell_memorization_info",
   })
   .array("memorized_spells", {
     type: spell_memorization_table_parser,
     length: "count_of_memorized_spell_table",
+    offset: "offset_to_memorized_spell_table",
   })
   .array("effects", {
     type: effects_v2_without_headers_parser,
     length: "count_of_effects",
+    offset: "offset_to_effects",
   })
   .array("item_table", {
     type: item_table_parser,
     length: "count_of_items",
+    offset: "offset_to_items",
   })
   .array("item_slots", {
     type: item_slots_parser,
+    offset: "offset_to_item_slots",
     readUntil: "eof",
   });
 
