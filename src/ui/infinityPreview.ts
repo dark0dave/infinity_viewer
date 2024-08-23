@@ -1,6 +1,7 @@
 import * as vscode from "vscode";
 import { Disposable } from "./disposable";
 import factory from "../models/factory";
+import * as path from "path";
 
 type PreviewState = "Disposed" | "Visible" | "Active";
 
@@ -14,7 +15,7 @@ export class InfinityPreview extends Disposable {
   ) {
     super();
     const resourceRoot = resource.with({
-      path: resource.path.replace(/\/[^/]+?\.\w+$/, "/"),
+      path: path.dirname(resource.path.trim()),
     });
 
     webviewEditor.webview.options = {

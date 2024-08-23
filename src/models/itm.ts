@@ -1,5 +1,6 @@
 import feature_block_parser from "./feature_block";
 import header_parser from "./header";
+import { Parser } from "binary-parser";
 
 const item_header_parser = header_parser()
   .int32le("unidentified_item_name")
@@ -38,7 +39,7 @@ const item_header_parser = header_parser()
   .int16le("index_to_equipping_feature_blocks")
   .int16le("count_of_feature_blocks");
 
-const extended_item_header_parser = item_header_parser
+const extended_item_header_parser = new Parser()
   .uint8("attack_type")
   .uint8("id_required")
   .uint8("location")
@@ -68,16 +69,23 @@ const extended_item_header_parser = item_header_parser
   })
   .uint16le("projectile_animation")
   .array("melee_animation", {
-    type: "uint16le",
-    length: 3,
+    type: "uint8",
+    length: 6,
   })
   .uint16le("is_arrow")
   .uint16le("is_bolt")
   .uint16le("is_bullet");
 
-const parser = extended_item_header_parser.array("equipping_feature_blocks", {
-  type: feature_block_parser,
-  length: "count_of_feature_blocks",
-});
+const parser = item_header_parser
+  .array("extended_headers", {
+    type: extended_item_header_parser,
+    length: "count_of_extended_headers",
+    offset: "offset_to_extended_headers",
+  })
+  .array("equipping_feature_blocks", {
+    type: feature_block_parser,
+    length: "count_of_feature_blocks",
+    offset: "offset_to_feature_blocks",
+  });
 
 export default parser;
