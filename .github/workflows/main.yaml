@@ -31,7 +31,7 @@ jobs:
           - os: ubuntu-latest
             test_cmd: xvfb-run -a npm test
           - os: windows-latest
-            test_cmd: npm test
+            test_cmd: ROOT="../../" npm test
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -40,6 +40,7 @@ jobs:
           cache: "npm"
       - run: npm ci
       - run: ${{ matrix.test_cmd }}
+        shell: bash
   build:
     runs-on: ubuntu-latest
     steps:

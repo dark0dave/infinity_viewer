@@ -1,0 +1,308 @@
+{
+  "signature": "AREA",
+  "version": "V1.0",
+  "area_wed": "AR0002",
+  "last_saved": 0,
+  "area_flags": 0,
+  "resref_of_the_area_to_the_north_of_this_area": "",
+  "north_area_flags": 0,
+  "resref_of_the_area_to_the_east_of_this_area": "",
+  "east_area_flags": 0,
+  "resref_of_the_area_to_the_south_of_this_area": "",
+  "south_area_flags": 0,
+  "resref_of_the_area_to_the_west_of_this_area": "",
+  "west_area_flags": 0,
+  "area_type_flags": 0,
+  "rain_probability": 0,
+  "snow_probability": 0,
+  "fog_probability": 0,
+  "lightning_probability": 0,
+  "wind_speed": 159,
+  "offset_to_actors": 284,
+  "count_of_actors": 1,
+  "count_of_regions": 1,
+  "offset_to_regions": 556,
+  "offset_to_spawn_points": 752,
+  "count_of_spawn_points": 0,
+  "offset_to_entrances": 752,
+  "count_of_entrances": 1,
+  "offset_to_containers": 856,
+  "count_of_containers": 0,
+  "count_of_items": 0,
+  "offset_to_items": 856,
+  "offset_to_vertices": 856,
+  "count_of_vertices": 4,
+  "count_of_ambients": 0,
+  "offset_to_ambients": 856,
+  "offset_to_variables": 856,
+  "count_of_variables": 0,
+  "offset_to_tiled_object_flags": 0,
+  "count_of_tiled_object_flags": 0,
+  "area_script": "AR0002",
+  "size_of_explored_bitmask": 0,
+  "offset_to_explored_bitmask": 856,
+  "count_of_doors": 0,
+  "offset_to_doors": 856,
+  "count_of_animations": 3,
+  "offset_to_animations": 872,
+  "count_of_tiled_objects": 0,
+  "offset_to_tiled_objects": 856,
+  "offset_to_song_entries": 1100,
+  "offset_to_rest_interruptions": 1244,
+  "offset_to_automap_notes": 0,
+  "count_of_automap_notes": 0,
+  "offset_to_projectile_traps": 0,
+  "number_of_entries_in_the_projectile_traps": 0,
+  "rest_movie_day": "",
+  "rest_movie_night": "",
+  "unused": [
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0
+  ],
+  "actors": [
+    {
+      "name": "Priest of Helm",
+      "current_x_coordinate": 446,
+      "current_y_coordinate": 333,
+      "destination_x_coordinate": 446,
+      "destination_y_coordinate": 333,
+      "flags": 1,
+      "has_been_spawned": 0,
+      "first_letter_of_cre_resref": 0,
+      "unused_1": 0,
+      "actor_animation": 24576,
+      "actor_orientation": 0,
+      "unused_2": 0,
+      "actor_removal_timer": 4294967295,
+      "movement_restriction_distance": 0,
+      "movement_restriction_distance_move_to_object": 0,
+      "actor_appearence_schedule": 4294967295,
+      "num_times_talked_to": 0,
+      "dialog": "",
+      "script_override": "",
+      "script_general": "",
+      "script_class": "",
+      "script_race": "",
+      "script_default": "",
+      "script_specific": "",
+      "cre_file": "PRIHEL",
+      "offset_to_cre_structure": 0,
+      "size_of_stored_cre_structure": 0,
+      "unused_3": [
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0
+      ]
+    }
+  ],
+  "regions": [
+    {
+      "name": "Door0200",
+      "region_type": 2,
+      "minimum_bounding_box_of_this_point": [202, 488, 310, 613],
+      "count_of_vertices_composing_the_perimeter": 4,
+      "index_to_first_vertex": 0,
+      "trigger_value": 0,
+      "cursor_index": 30,
+      "destination_area": "AR0200",
+      "entrance_name_in_destination_area": "Exit0002",
+      "flags": 0,
+      "information_text": 0,
+      "trap_detection_difficulty_percent": 0,
+      "trap_removal_difficulty_percent": 0,
+      "region_is_trapped": 0,
+      "trap_detected": 0,
+      "trap_launch_location": [404, 340],
+      "key_item": "",
+      "region_script": "",
+      "alternative_use_point_x_coordinate": 14,
+      "alternative_use_point_y_coordinate": 0,
+      "unknown_1": [
+        53, 0, 0, 0, 0, 0, 0, 0, 76, 1, 0, 0, 147, 0, 0, 0, 224, 190, 69, 0, 20,
+        0, 20, 0, 3, 0, 0, 0, 0, 0, 0, 0, 35, 1, 251, 1
+      ],
+      "sound": [246, 255, 255, 255, 246, 255, 255, 255],
+      "talk_location_point_x": 10,
+      "talk_location_point_y": 0,
+      "speaker_name": 10,
+      "dialog_file": "Exit4800"
+    }
+  ],
+  "spawn_points": [],
+  "entrances": [
+    {
+      "name": "Exit0200",
+      "x_coordinate": 310,
+      "y_coordinate": 490,
+      "orientation": 10,
+      "unused": [
+        0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 16, 0, 0, 0, 0, 124, 0, 0, 224, 3, 0, 0,
+        31, 0, 0, 0, 0, 0, 0, 0, 64, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+      ]
+    }
+  ],
+  "containers": [],
+  "items": [],
+  "vertices": [
+    {
+      "x": 236,
+      "y": 488
+    },
+    {
+      "x": 202,
+      "y": 561
+    },
+    {
+      "x": 310,
+      "y": 613
+    },
+    {
+      "x": 310,
+      "y": 525
+    }
+  ],
+  "ambients": [],
+  "variables": [],
+  "explored_bitmasks": [],
+  "doors": [],
+  "animations": [
+    {
+      "name": "FLAME2L\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000X\u0002\b\u0002",
+      "x_coordinate": 125,
+      "y_coordinate": 410,
+      "animation_appearence_schedule": 4294967295,
+      "animation_resref": "FLAME2L",
+      "bam_sequence_number": 0,
+      "bam_frame_number": 0,
+      "flags": 4099,
+      "height": 5,
+      "transparency": 0,
+      "starting_frame": 255,
+      "chance_of_looping": 0,
+      "skip_cycles": 0,
+      "palette": "",
+      "animation_width": 9416,
+      "animation_height": 282
+    },
+    {
+      "name": "FLAME2L\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000X\u0002\b\u0002",
+      "x_coordinate": 253,
+      "y_coordinate": 281,
+      "animation_appearence_schedule": 4294967295,
+      "animation_resref": "FLAME2L",
+      "bam_sequence_number": 0,
+      "bam_frame_number": 0,
+      "flags": 4099,
+      "height": 36,
+      "transparency": 0,
+      "starting_frame": 255,
+      "chance_of_looping": 0,
+      "skip_cycles": 0,
+      "palette": "",
+      "animation_width": 9416,
+      "animation_height": 282
+    },
+    {
+      "name": "FLAME2L\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000X\u0002\b\u0002",
+      "x_coordinate": 490,
+      "y_coordinate": 136,
+      "animation_appearence_schedule": 4294967295,
+      "animation_resref": "FLAME2L",
+      "bam_sequence_number": 0,
+      "bam_frame_number": 0,
+      "flags": 4099,
+      "height": 71,
+      "transparency": 0,
+      "starting_frame": 255,
+      "chance_of_looping": 0,
+      "skip_cycles": 0,
+      "palette": "",
+      "animation_width": 9416,
+      "animation_height": 282
+    }
+  ],
+  "automap_notes": [],
+  "tiled_objects": [],
+  "projectile_traps": [],
+  "songs": {
+    "day_song_reference_number": 4,
+    "night_song_reference_number": 4,
+    "win_song_reference_number": 4294967295,
+    "battle_song_reference_number": 19,
+    "lose_song_reference_number": 4294967295,
+    "alt_music_1": 4294967295,
+    "alt_music_2": 4294967295,
+    "alt_music_3": 4294967295,
+    "alt_music_4": 4294967295,
+    "alt_music_5": 4294967295,
+    "main_day_ambient_1": "",
+    "main_day_ambient_2": "",
+    "main_day_ambient_volume_percent": 100,
+    "main_night_ambient_1": "",
+    "main_night_ambient_2": "",
+    "main_night_ambient_volume_percent": 100,
+    "reverb_or_unused": 0,
+    "unused": [
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+    ]
+  },
+  "rest_interruptions": {
+    "name": "",
+    "interruption_explanation_text": [
+      10134, 10134, 10134, 10134, 10134, 10134, 10134, 10134, 10134, 10134
+    ],
+    "resref_of_creature_to_spawn": [
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      }
+    ],
+    "count_of_creatures_in_spawn_table": 0,
+    "difficulty": 1,
+    "removal_time": 1,
+    "movement_restriction_distance": 1,
+    "movement_restriction_distance_move_to_object": 1,
+    "maximum_number_of_creatures_to_spawn": 10,
+    "interruption_point_enabled": 1,
+    "probability_day_per_hour": 10,
+    "probability_night_per_hour": 10,
+    "unused": [
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0
+    ]
+  }
+}

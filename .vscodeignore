@@ -11,3 +11,5 @@ cliff.toml
 *toml
 *yaml
 fixtures
+.vscode-test.mjs
+large_icon.png
