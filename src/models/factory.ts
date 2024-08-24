@@ -17,8 +17,17 @@ const model_factory = (extension: String): Parser => {
   }
 };
 
+const getFileContents = (path: fs.PathLike): Uint8Array => {
+  try {
+    return fs.readFileSync(path, { encoding: null });
+  } catch (e) {
+    console.log(e);
+    throw e;
+  }
+};
+
 const factory = (path: fs.PathLike): String => {
-  const buffer = fs.readFileSync(path);
+  const buffer = getFileContents(path);
   const extension = path
     .toString()
     .toLowerCase()

@@ -93,7 +93,8 @@ export class InfinityPreview extends Disposable {
   private setWebviewContents(): void {
     const webview = this.webviewEditor.webview;
     const cspSource = webview.cspSource;
-    const docPath = webview.asWebviewUri(this.resource);
+    // const uri = vscode.Uri.file(this.resource.path);
+    // const docPath = webview.asWebviewUri(uri);
 
     let html: string = `<!DOCTYPE html>
     <html dir="ltr" mozdisallowselectionprint>
@@ -105,7 +106,7 @@ export class InfinityPreview extends Disposable {
     </head>
     <h1>Infinity Viewer</h1>`;
     this.webviewEditor.webview.html = html;
-    const obj = factory(docPath.path);
+    const obj = factory(this.resource.fsPath);
     const json = JSON.stringify(obj, null, 2);
     this.webviewEditor.webview.html += `<div><pre>${json}<div><pre>`;
   }
