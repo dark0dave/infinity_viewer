@@ -93,8 +93,35 @@ export class InfinityPreview extends Disposable {
   private setWebviewContents(): void {
     const webview = this.webviewEditor.webview;
     const cspSource = webview.cspSource;
-    // const uri = vscode.Uri.file(this.resource.path);
-    // const docPath = webview.asWebviewUri(uri);
+    const obj = factory(this.resource.fsPath);
+    const syntaxHighlight = (json: string | Record<string, any>): string => {
+      if (typeof json != "string") {
+        json = JSON.stringify(json, undefined, 4);
+      }
+      json = json
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
+      return json.replace(
+        /("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g,
+        function (match) {
+          let cls = "number";
+          if (/^"/.test(match)) {
+            if (/:$/.test(match)) {
+              cls = "key";
+            } else {
+              cls = "string";
+            }
+          } else if (/true|false/.test(match)) {
+            cls = "boolean";
+          } else if (/null/.test(match)) {
+            cls = "null";
+          }
+          return '<span class="' + cls + '">' + match + "</span>";
+        },
+      );
+    };
+    const display = syntaxHighlight(obj);
 
     let html: string = `<!DOCTYPE html>
     <html dir="ltr" mozdisallowselectionprint>
@@ -102,12 +129,31 @@ export class InfinityPreview extends Disposable {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta http-equiv="Content-Security-Policy" content="default-src 'none'; connect-src ${cspSource}; script-src 'unsafe-inline' ${cspSource}; style-src 'unsafe-inline' ${cspSource}; img-src blob: data: ${cspSource};">
+    <style>
+      .pre {
+        outline: 1px solid #ccc;
+        padding: 5px;
+        margin: 5px;
+      }
+      .string {
+        color: green;
+      }
+      .number {
+        color: darkorange;
+      }
+      .boolean {
+        color: blue;
+      }
+      .null {
+        color: magenta;
+      }
+      .key {
+        color: white;
+      }
+    </style>
     <title>Infinity viewer</title>
     </head>
-    <h1>Infinity Viewer</h1>`;
-    this.webviewEditor.webview.html = html;
-    const obj = factory(this.resource.fsPath);
-    const json = JSON.stringify(obj, null, 2);
-    this.webviewEditor.webview.html += `<div><pre>${json}<div><pre>`;
+    <h1>${path.basename(this.resource.path)}</h1>`;
+    this.webviewEditor.webview.html = `${html}<div><pre>${display}<div><pre>`;
   }
 }

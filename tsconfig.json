@@ -5,8 +5,11 @@
     "outDir": "out",
     "lib": ["ES2022"],
     "sourceMap": true,
-    "rootDir": "src",
-    "strict": true,
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "allowJs": true,
+    "strict": false,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "noUnusedParameters": true

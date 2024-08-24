@@ -17,7 +17,7 @@ const model_factory = (extension: String): Parser => {
   }
 };
 
-const getFileContents = (path: fs.PathLike): Uint8Array => {
+const getFileContents = (path: fs.PathLike): Buffer => {
   try {
     return fs.readFileSync(path, { encoding: null });
   } catch (e) {
