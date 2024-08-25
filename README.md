@@ -16,6 +16,7 @@ Infinity Viewer lets you view infinity engine binary files as json, primary focu
 - ARE files
 - CRE files
 - ITM files
+- SPL files
 
 ## Todo
 

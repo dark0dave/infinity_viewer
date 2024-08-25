@@ -1,17 +1,20 @@
+import are_parser from "./are";
 import cre_parser from "./cre";
 import itm_parser from "./itm";
-import are_parser from "./are";
+import spl_parser from "./spl";
 import fs from "fs";
 import { Parser } from "binary-parser";
 
 const model_factory = (extension: String): Parser => {
   switch (extension) {
+    case "are":
+      return are_parser;
     case "cre":
       return cre_parser;
     case "itm":
       return itm_parser;
-    case "are":
-      return are_parser;
+    case "spl":
+      return spl_parser;
     default:
       throw "Not Supported";
   }
@@ -33,7 +36,12 @@ const factory = (path: fs.PathLike): String => {
     .toLowerCase()
     .substring(path.toString().lastIndexOf(".") + 1, path.toString().length);
   const parser = model_factory(extension);
-  return parser.parse(buffer);
+  try {
+    return parser.parse(buffer);
+  } catch (e) {
+    console.log(`Failed to parse ${path}`);
+    throw e;
+  }
 };
 
 export default factory;
