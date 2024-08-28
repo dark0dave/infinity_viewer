@@ -1,7 +1,7 @@
 import header_parser from "./header";
 import { Parser } from "binary-parser";
 
-const creature_parser = header_parser()
+const creature_header_parser = header_parser()
   .uint32("long_creature_name")
   .uint32("short_creature_name")
   .uint32("flags")
@@ -241,7 +241,7 @@ const item_slots_parser = new Parser()
   .int16le("weapon_slot_selected")
   .int16le("weapon_ability_selected");
 
-const parser = creature_parser
+const parser = creature_header_parser
   .array("known_spells", {
     type: known_spells_parser,
     length: "count_of_known_spells",
@@ -257,20 +257,27 @@ const parser = creature_parser
     length: "count_of_memorized_spell_table",
     offset: "offset_to_memorized_spell_table",
   })
+  .saveOffset("currentOffset")
+  .seek(function () {
+    return this.offset_to_effects - this.currentOffset;
+  })
+  // TODO: Use effstructure to parse this better ie it can be an effect v1
   .array("effects", {
     type: effects_v2_without_headers_parser,
     length: "count_of_effects",
-    offset: "offset_to_effects",
+  })
+  .saveOffset("currentOffset")
+  .seek(function () {
+    return this.offset_to_item_slots - this.currentOffset;
+  })
+  .nest("item_slots", { type: item_slots_parser })
+  .saveOffset("currentOffset")
+  .seek(function () {
+    return this.offset_to_items - this.currentOffset;
   })
   .array("item_table", {
     type: item_table_parser,
     length: "count_of_items",
-    offset: "offset_to_items",
-  })
-  .array("item_slots", {
-    type: item_slots_parser,
-    offset: "offset_to_item_slots",
-    readUntil: "eof",
   });
 
 export default parser;
