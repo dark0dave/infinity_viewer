@@ -90,7 +90,7 @@
     "binary-parser": "^2.2.1"
   },
   "devDependencies": {
-    "@types/mocha": "^10.0.7",
+    "@types/mocha": "^10.0.8",
     "@types/node": "^20.14.10",
     "@types/vscode": "^1.80.0",
     "@vscode/test-cli": "^0.0.9",
