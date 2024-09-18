@@ -14,6 +14,7 @@ Infinity Viewer lets you view infinity engine binary files as json, primary focu
 ## Current support
 
 - ARE files
+- BAM files
 - CRE files
 - ITM files
 - SPL files

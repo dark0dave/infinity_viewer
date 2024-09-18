@@ -1,0 +1,38 @@
+{
+  "signature": "BAM",
+  "version": "V2",
+  "bam_version": 2,
+  "count_of_frame_entries": 1,
+  "count_of_cycle_entries": 1,
+  "count_of_data_blocks": 1,
+  "offset_to_frame_entries": 36,
+  "offset_to_cycle_entries": 32,
+  "offset_to_data_blocks": 48,
+  "frame_entries": [
+    {
+      "frame_width": 1,
+      "frame_hieght": 0,
+      "frame_center_x_coordinate": 59,
+      "frame_center_y_coordinate": 0,
+      "compressed_color_index": 37,
+      "offset_to_frame_data": 0
+    }
+  ],
+  "cycle_entries": [
+    {
+      "count_of_frame_indices": 0,
+      "index_into_frame_lookup_table": 256
+    }
+  ],
+  "data_blocks": [
+    {
+      "pvrz_page": 285184,
+      "source_x_coordinate": 27904,
+      "source_y_coordinate": 31488,
+      "width": 15104,
+      "height": 9472,
+      "target_x_coordinate": 0,
+      "target_y_coordinate": 0
+    }
+  ]
+}
