@@ -1,18 +1,25 @@
-import header_parser from "./header";
+import { header_parser } from "./common";
 import { Parser } from "binary-parser";
 import zlib from "zlib";
 
+// "BAM "
 const BAM_SIGNATURE = [66, 65, 77, 32];
+// "BAMC"
 const BAMC_SIGNATURE = [66, 65, 77, 67];
-const VERSION1 = [86, 49, 32, 32];
-const VERSION2 = [86, 50, 32, 32];
+// "V1"
+const VERSION1 = [86, 49];
+// "V2"
+const VERSION2 = [86, 50];
+// "BAM V1"
 const BAMV1 = Buffer.from(BAM_SIGNATURE.concat(VERSION1));
+// "BAM V2"
 const BAMV2 = Buffer.from(BAM_SIGNATURE.concat(VERSION2));
+// "BAMCV1"
 const BAMCV1 = Buffer.from(BAMC_SIGNATURE.concat(VERSION2));
 
-// Bam  v1 -> 1
-// Bam  v2 -> 2
-// Bamc v1 -> 3
+// Bam  V1 -> 1
+// Bam  V2 -> 2
+// Bamc V1 -> 3
 const type_parser = new Parser().uint8("bam_version");
 
 const cycle_entry = new Parser()
@@ -125,9 +132,10 @@ const parser = header_parser()
       }
       return Buffer.from([0]);
     },
-    length: 8,
+    length: 6,
     type: type_parser,
   })
+  .seek(2)
   .choice({
     tag: "bam_version",
     choices: {

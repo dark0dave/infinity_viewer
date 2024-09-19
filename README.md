@@ -16,12 +16,13 @@ Infinity Viewer lets you view infinity engine binary files as json, primary focu
 - ARE files
 - BAM files
 - CRE files
+- EFF files
 - ITM files
 - SPL files
 
 ## Todo
 
-All the other file types
+Support all the other ie binary file types
 
 ### How to build me
 
@@ -31,4 +32,4 @@ All the other file types
 npm run package
 ```
 
-The vsix file can then be install to vscode/vscodium.
+The vsix file can then be installed to vscode/vscodium.

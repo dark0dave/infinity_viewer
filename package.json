@@ -2,7 +2,7 @@
   "name": "infinity-viewer",
   "displayName": "infinity-viewer",
   "description": "Infinity Viewer lets you view infinity engine binary files as json",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "keywords": [
     "Infinity Engine",
     "Baldur's Gate",
@@ -62,6 +62,12 @@
             "filenamePattern": "*.CRE"
           },
           {
+            "filenamePattern": "*.eff"
+          },
+          {
+            "filenamePattern": "*.EFF"
+          },
+          {
             "filenamePattern": "*.itm"
           },
           {
@@ -90,7 +96,7 @@
     "deploy": "vsce publish",
     "test": "npm run package && vscode-test",
     "watch": "tsc -watch -p ./",
-    "lint": "prettier -w src"
+    "lint": "prettier -w ."
   },
   "dependencies": {
     "binary-parser": "^2.2.1"

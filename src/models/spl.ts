@@ -1,5 +1,4 @@
-import feature_block_parser from "./feature_block";
-import header_parser from "./header";
+import { feature_block_parser, header_parser } from "./common";
 import { Parser } from "binary-parser";
 
 const spell_header_parser = header_parser()
