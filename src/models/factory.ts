@@ -1,4 +1,5 @@
 import are_parser from "./are";
+import bam_parser from "./bam";
 import cre_parser from "./cre";
 import itm_parser from "./itm";
 import spl_parser from "./spl";
@@ -9,6 +10,8 @@ const model_factory = (extension: String): Parser => {
   switch (extension) {
     case "are":
       return are_parser;
+    case "bam":
+      return bam_parser;
     case "cre":
       return cre_parser;
     case "itm":
@@ -39,7 +42,7 @@ const factory = (path: fs.PathLike): String => {
   try {
     return parser.parse(buffer);
   } catch (e) {
-    console.log(`Failed to parse ${path}`);
+    console.error(`Failed to parse ${path} with ${JSON.stringify(e)}`);
     throw e;
   }
 };

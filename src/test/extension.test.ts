@@ -1,5 +1,6 @@
 import * as assert from "assert";
 import are_parser from "../models/are";
+import bam_parser from "../models/bam";
 import cre_parser from "../models/cre";
 import spl_parser from "../models/spl";
 import * as fs from "fs";
@@ -16,6 +17,24 @@ suite("Extension Test Suite", () => {
   const are_file_json = JSON.parse(
     fs
       .readFileSync(path.normalize(`${root}/fixtures/ar0002.are.json`), "utf8")
+      .trim(),
+  );
+
+  const bam_v1_file = fs.readFileSync(
+    path.normalize(`${root}/fixtures/kit.bam`),
+  );
+  const bam_v1_json_file = JSON.parse(
+    fs
+      .readFileSync(path.normalize(`${root}/fixtures/kit.bam.json`), "utf8")
+      .trim(),
+  );
+
+  const bam_v2_file = fs.readFileSync(
+    path.normalize(`${root}/fixtures/ring.bam`),
+  );
+  const bam_v2_json_file = JSON.parse(
+    fs
+      .readFileSync(path.normalize(`${root}/fixtures/ring.bam.json`), "utf8")
       .trim(),
   );
 
@@ -44,6 +63,17 @@ suite("Extension Test Suite", () => {
     assert.strictEqual(
       JSON.stringify(are_parser.parse(are_file)),
       JSON.stringify(are_file_json),
+    );
+  });
+
+  test("Bam Tests", () => {
+    assert.strictEqual(
+      JSON.stringify(bam_parser.parse(bam_v1_file)),
+      JSON.stringify(bam_v1_json_file),
+    );
+    assert.strictEqual(
+      JSON.stringify(bam_parser.parse(bam_v2_file)),
+      JSON.stringify(bam_v2_json_file),
     );
   });
 
