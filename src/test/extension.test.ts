@@ -2,6 +2,8 @@ import * as assert from "assert";
 import are_parser from "../models/are";
 import bam_parser from "../models/bam";
 import cre_parser from "../models/cre";
+import eff_parser from "../models/eff";
+import itm_parser from "../models/itm";
 import spl_parser from "../models/spl";
 import * as fs from "fs";
 import * as path from "path";
@@ -50,6 +52,27 @@ suite("Extension Test Suite", () => {
       .trim(),
   );
 
+  const eff_file = fs.readFileSync(
+    path.normalize(`${root}/fixtures/geniedam.eff`),
+  );
+  const eff_file_json = JSON.parse(
+    fs
+      .readFileSync(
+        path.normalize(`${root}/fixtures/geniedam.eff.json`),
+        "utf8",
+      )
+      .trim(),
+  );
+
+  const itm_file = fs.readFileSync(
+    path.normalize(`${root}/fixtures/sw1h01.itm`),
+  );
+  const itm_file_json = JSON.parse(
+    fs
+      .readFileSync(path.normalize(`${root}/fixtures/sw1h01.itm.json`), "utf8")
+      .trim(),
+  );
+
   const spl_file = fs.readFileSync(
     path.normalize(`${root}/fixtures/gate1.spl`),
   );
@@ -81,6 +104,20 @@ suite("Extension Test Suite", () => {
     assert.strictEqual(
       JSON.stringify(cre_parser.parse(cre_file)),
       JSON.stringify(cre_file_json),
+    );
+  });
+
+  test("Effect Tests", () => {
+    assert.strictEqual(
+      JSON.stringify(eff_parser.parse(eff_file)),
+      JSON.stringify(eff_file_json),
+    );
+  });
+
+  test("Item Tests", () => {
+    assert.strictEqual(
+      JSON.stringify(itm_parser.parse(itm_file)),
+      JSON.stringify(itm_file_json),
     );
   });
 

@@ -1,4 +1,4 @@
-import header_parser from "./header";
+import { header_parser } from "./common";
 import { Parser } from "binary-parser";
 
 const file_header_parser = header_parser()

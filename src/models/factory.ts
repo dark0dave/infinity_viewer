@@ -1,6 +1,7 @@
 import are_parser from "./are";
 import bam_parser from "./bam";
 import cre_parser from "./cre";
+import eff_parser from "./eff";
 import itm_parser from "./itm";
 import spl_parser from "./spl";
 import fs from "fs";
@@ -14,6 +15,8 @@ const model_factory = (extension: String): Parser => {
       return bam_parser;
     case "cre":
       return cre_parser;
+    case "eff":
+      return eff_parser;
     case "itm":
       return itm_parser;
     case "spl":
@@ -27,7 +30,7 @@ const getFileContents = (path: fs.PathLike): Buffer => {
   try {
     return fs.readFileSync(path, { encoding: null });
   } catch (e) {
-    console.log(e);
+    console.error(e);
     throw e;
   }
 };
