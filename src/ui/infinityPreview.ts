@@ -123,7 +123,7 @@ export class InfinityPreview extends Disposable {
     };
     const display = syntaxHighlight(obj);
 
-    let html: string = `<!DOCTYPE html>
+    const html: string = `<!DOCTYPE html>
     <html dir="ltr" mozdisallowselectionprint>
     <head>
     <meta charset="utf-8">
@@ -150,10 +150,50 @@ export class InfinityPreview extends Disposable {
       .key {
         color: white;
       }
+      .panel {
+        position: fixed;
+        right: 0;
+        top: 30%;
+        display: flex;
+        background: #34ebb1;
+        color: black;
+        width: 50px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      button {
+        background: none;
+        border: none;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.2s;
+      }
     </style>
+    <script>
+      function increaseFont() {
+        const content = document.getElementById("pre");
+        content.style.fontSize = (parseInt(content.style.fontSize.replace("%", ""), 10) + 10) + "%";
+        const value = document.getElementById("font-size");
+        value.innerHTML = content.style.fontSize;
+      }
+      function decreaseFont() {
+        const content = document.getElementById("pre");
+        content.style.fontSize = (parseInt(content.style.fontSize.replace("%", ""), 10) - 10) + "%";
+        const value = document.getElementById("font-size");
+        value.innerHTML = content.style.fontSize;
+      }
+    </script>
     <title>Infinity viewer</title>
     </head>
+    <div class="panel">
+      <button onclick="increaseFont()">⬆</button>
+      <span id="font-size">100%</span>
+      <button onclick="decreaseFont()">⬇</button>
+    </div>
     <h1>${path.basename(this.resource.path)}</h1>`;
-    this.webviewEditor.webview.html = `${html}<div><pre>${display}<div><pre>`;
+    this.webviewEditor.webview.html = `${html}<div><pre id="pre" style="font-size:100%">${display}<div><pre>`;
   }
 }
