@@ -15,7 +15,7 @@ const BAMV1 = Buffer.from(BAM_SIGNATURE.concat(VERSION1));
 // "BAM V2"
 const BAMV2 = Buffer.from(BAM_SIGNATURE.concat(VERSION2));
 // "BAMCV1"
-const BAMCV1 = Buffer.from(BAMC_SIGNATURE.concat(VERSION2));
+const BAMCV1 = Buffer.from(BAMC_SIGNATURE.concat(VERSION1));
 
 // Bam  V1 -> 1
 // Bam  V2 -> 2
@@ -109,11 +109,20 @@ const bam_v2_parser = bam_v2_header
 
 const bamc_parser = new Parser()
   .uint32le("uncompressed_data_length")
-  .array("compressed_data", {
+  .buffer("compressed_data", {
     type: "uint8",
     readUntil: "eof",
     formatter: (buffer: any) => {
-      return zlib.inflateRawSync(buffer);
+      console.log(buffer);
+      try {
+        const uncompressed_buffer = zlib.inflateSync(buffer, {
+          chunkSize: 8 * 1024,
+        });
+        return parser.parse(uncompressed_buffer);
+      } catch (e) {
+        console.error(`Failed to inflate with: ${e}`);
+        return buffer;
+      }
     },
   });
 

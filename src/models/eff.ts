@@ -62,6 +62,7 @@ const parser = header_parser()
   .choice({
     tag: "effect_version",
     choices: {
+      0: null,
       1: effect_v1_parser,
       2: effect_v2_parser,
     },

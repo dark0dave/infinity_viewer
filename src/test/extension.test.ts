@@ -40,6 +40,15 @@ suite("Extension Test Suite", () => {
       .trim(),
   );
 
+  const bamc_v1_file = fs.readFileSync(
+    path.normalize(`${root}/fixtures/bamc.bam`),
+  );
+  const bamc_v1_json_file = JSON.parse(
+    fs
+      .readFileSync(path.normalize(`${root}/fixtures/bamc.bam.json`), "utf8")
+      .trim(),
+  );
+
   const cre_file = fs.readFileSync(
     path.normalize(`${root}/fixtures/cutmelis.cre`),
   );
@@ -97,6 +106,10 @@ suite("Extension Test Suite", () => {
     assert.strictEqual(
       JSON.stringify(bam_parser.parse(bam_v2_file)),
       JSON.stringify(bam_v2_json_file),
+    );
+    assert.strictEqual(
+      JSON.stringify(bam_parser.parse(bamc_v1_file)),
+      JSON.stringify(bamc_v1_json_file),
     );
   });
 
