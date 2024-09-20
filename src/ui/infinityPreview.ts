@@ -123,6 +123,10 @@ export class InfinityPreview extends Disposable {
     };
     const display = syntaxHighlight(obj);
 
+    const defaultFontSize: Number = Number(
+      vscode.workspace.getConfiguration().get("default.font.size"),
+    );
+
     const html: string = `<!DOCTYPE html>
     <html dir="ltr" mozdisallowselectionprint>
     <head>
@@ -185,15 +189,23 @@ export class InfinityPreview extends Disposable {
         const value = document.getElementById("font-size");
         value.innerHTML = content.style.fontSize;
       }
+      window.addEventListener("wheel", event => {
+        const delta = Math.sign(event.deltaY);
+        if (delta > 0) {
+          increaseFont();
+        } else {
+          decreaseFont();
+        }
+      });
     </script>
     <title>Infinity viewer</title>
     </head>
     <div class="panel">
       <button onclick="increaseFont()">⬆</button>
-      <span id="font-size">100%</span>
+      <span id="font-size">${defaultFontSize}%</span>
       <button onclick="decreaseFont()">⬇</button>
     </div>
     <h1>${path.basename(this.resource.path)}</h1>`;
-    this.webviewEditor.webview.html = `${html}<div><pre id="pre" style="font-size:100%">${display}<div><pre>`;
+    this.webviewEditor.webview.html = `${html}<div><pre id="pre" style="font-size:${defaultFontSize}%">${display}<div><pre>`;
   }
 }
