@@ -189,14 +189,6 @@ export class InfinityPreview extends Disposable {
         const value = document.getElementById("font-size");
         value.innerHTML = content.style.fontSize;
       }
-      window.addEventListener("wheel", event => {
-        const delta = Math.sign(event.deltaY);
-        if (delta > 0) {
-          increaseFont();
-        } else {
-          decreaseFont();
-        }
-      });
     </script>
     <title>Infinity viewer</title>
     </head>
