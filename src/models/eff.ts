@@ -1,4 +1,4 @@
-import { effects_v2_without_headers_parser, header_parser } from "./common";
+import { effect_v1_parser, effect_v2_parser, header_parser } from "./common";
 import { Parser } from "binary-parser";
 
 // "EFF "
@@ -11,33 +11,6 @@ const VERSION2 = [86, 50];
 const EFFECTV1 = Buffer.from(EFFECT_SIGNATURE.concat(VERSION1));
 // "EFF V2"
 const EFFECTV2 = Buffer.from(EFFECT_SIGNATURE.concat(VERSION2));
-
-const effect_v1_parser = new Parser()
-  .uint16le("effect_type")
-  .uint8("target_type")
-  .uint8("power")
-  .uint32le("parameter_1")
-  .uint32le("parameter_2")
-  .uint8("timing_mode")
-  .uint8("dispel_resistance")
-  .uint32le("duration")
-  .uint8("probability_1")
-  .uint8("probability_2")
-  .string("resref_key", {
-    length: 8,
-    stripNull: true,
-  })
-  .uint32le("dice_thrown_maximum_level")
-  .uint32le("dice_sides_minimum_level")
-  .uint32le("saving_throw_type")
-  .uint32le("saving_throw_bonus")
-  .uint32le("nown");
-
-const effect_v2_parser = new Parser().nest("effect_v2", {
-  type: header_parser().nest({
-    type: effects_v2_without_headers_parser,
-  }),
-});
 
 // Effect  V1 -> 1
 // Effect  V2 -> 2

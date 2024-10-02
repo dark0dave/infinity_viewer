@@ -18,7 +18,7 @@
   "leather_color": 94,
   "armor_color": 97,
   "hair_color": 111,
-  "effstructure": 1,
+  "eff_structure": 1,
   "small_portrait": "MEL_GDS",
   "large_portrait": "",
   "reputation": 0,
@@ -127,466 +127,98 @@
   "count_of_effects": 0,
   "dialog_ref": "None",
   "known_spells": [
-    {
-      "spell_name": "SPPR101",
-      "spell_level": 0,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR102",
-      "spell_level": 0,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR103",
-      "spell_level": 0,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR104",
-      "spell_level": 0,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR106",
-      "spell_level": 0,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR107",
-      "spell_level": 0,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR108",
-      "spell_level": 0,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR109",
-      "spell_level": 0,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR110",
-      "spell_level": 0,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR111",
-      "spell_level": 0,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR113",
-      "spell_level": 0,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR201",
-      "spell_level": 1,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR202",
-      "spell_level": 1,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR203",
-      "spell_level": 1,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR205",
-      "spell_level": 1,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR208",
-      "spell_level": 1,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR209",
-      "spell_level": 1,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR210",
-      "spell_level": 1,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR211",
-      "spell_level": 1,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR212",
-      "spell_level": 1,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR213",
-      "spell_level": 1,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR214",
-      "spell_level": 1,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR301",
-      "spell_level": 2,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR303",
-      "spell_level": 2,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR304",
-      "spell_level": 2,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR306",
-      "spell_level": 2,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR307",
-      "spell_level": 2,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR308",
-      "spell_level": 2,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR309",
-      "spell_level": 2,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR310",
-      "spell_level": 2,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR311",
-      "spell_level": 2,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR312",
-      "spell_level": 2,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR313",
-      "spell_level": 2,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR315",
-      "spell_level": 2,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR317",
-      "spell_level": 2,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR318",
-      "spell_level": 2,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR401",
-      "spell_level": 3,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR402",
-      "spell_level": 3,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR403",
-      "spell_level": 3,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR404",
-      "spell_level": 3,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR405",
-      "spell_level": 3,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR406",
-      "spell_level": 3,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR407",
-      "spell_level": 3,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR408",
-      "spell_level": 3,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR409",
-      "spell_level": 3,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR411",
-      "spell_level": 3,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR412",
-      "spell_level": 3,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR413",
-      "spell_level": 3,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR414",
-      "spell_level": 3,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR415",
-      "spell_level": 3,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR416",
-      "spell_level": 3,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR417",
-      "spell_level": 3,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR501",
-      "spell_level": 4,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR502",
-      "spell_level": 4,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR503",
-      "spell_level": 4,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR504",
-      "spell_level": 4,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR505",
-      "spell_level": 4,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR507",
-      "spell_level": 4,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR508",
-      "spell_level": 4,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR509",
-      "spell_level": 4,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR510",
-      "spell_level": 4,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR511",
-      "spell_level": 4,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR512",
-      "spell_level": 4,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR513",
-      "spell_level": 4,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR514",
-      "spell_level": 4,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPPR515",
-      "spell_level": 4,
-      "spell_type": 0
-    },
-    {
-      "spell_name": "SPWI617",
-      "spell_level": 5,
-      "spell_type": 1
-    },
-    {
-      "spell_name": "SPWI613",
-      "spell_level": 5,
-      "spell_type": 1
-    },
-    {
-      "spell_name": "SPWI506",
-      "spell_level": 4,
-      "spell_type": 1
-    },
-    {
-      "spell_name": "SPWI507",
-      "spell_level": 4,
-      "spell_type": 1
-    },
-    {
-      "spell_name": "SPWI522",
-      "spell_level": 4,
-      "spell_type": 1
-    },
-    {
-      "spell_name": "SPWI505",
-      "spell_level": 4,
-      "spell_type": 1
-    },
-    {
-      "spell_name": "SPWI510",
-      "spell_level": 4,
-      "spell_type": 1
-    },
-    {
-      "spell_name": "SPWI403",
-      "spell_level": 3,
-      "spell_type": 1
-    },
-    {
-      "spell_name": "SPWI405",
-      "spell_level": 3,
-      "spell_type": 1
-    },
-    {
-      "spell_name": "SPWI406",
-      "spell_level": 3,
-      "spell_type": 1
-    },
-    {
-      "spell_name": "SPWI408",
-      "spell_level": 3,
-      "spell_type": 1
-    },
-    {
-      "spell_name": "SPWI302",
-      "spell_level": 2,
-      "spell_type": 1
-    },
-    {
-      "spell_name": "SPWI308",
-      "spell_level": 2,
-      "spell_type": 1
-    },
-    {
-      "spell_name": "SPWI318",
-      "spell_level": 2,
-      "spell_type": 1
-    },
-    {
-      "spell_name": "SPWI311",
-      "spell_level": 2,
-      "spell_type": 1
-    },
-    {
-      "spell_name": "SPWI312",
-      "spell_level": 2,
-      "spell_type": 1
-    },
-    {
-      "spell_name": "SPWI201",
-      "spell_level": 1,
-      "spell_type": 1
-    },
-    {
-      "spell_name": "SPWI203",
-      "spell_level": 1,
-      "spell_type": 1
-    },
-    {
-      "spell_name": "SPWI211",
-      "spell_level": 1,
-      "spell_type": 1
-    },
-    {
-      "spell_name": "SPWI220",
-      "spell_level": 1,
-      "spell_type": 1
-    },
-    {
-      "spell_name": "SPWI213",
-      "spell_level": 1,
-      "spell_type": 1
-    },
-    {
-      "spell_name": "SPWI104",
-      "spell_level": 0,
-      "spell_type": 1
-    },
-    {
-      "spell_name": "SPWI105",
-      "spell_level": 0,
-      "spell_type": 1
-    },
-    {
-      "spell_name": "SPWI110",
-      "spell_level": 0,
-      "spell_type": 1
-    },
-    {
-      "spell_name": "SPWI112",
-      "spell_level": 0,
-      "spell_type": 1
-    },
-    {
-      "spell_name": "SPWI113",
-      "spell_level": 0,
-      "spell_type": 1
-    }
+    { "spell_name": "SPPR101", "spell_level": 0, "spell_type": 0 },
+    { "spell_name": "SPPR102", "spell_level": 0, "spell_type": 0 },
+    { "spell_name": "SPPR103", "spell_level": 0, "spell_type": 0 },
+    { "spell_name": "SPPR104", "spell_level": 0, "spell_type": 0 },
+    { "spell_name": "SPPR106", "spell_level": 0, "spell_type": 0 },
+    { "spell_name": "SPPR107", "spell_level": 0, "spell_type": 0 },
+    { "spell_name": "SPPR108", "spell_level": 0, "spell_type": 0 },
+    { "spell_name": "SPPR109", "spell_level": 0, "spell_type": 0 },
+    { "spell_name": "SPPR110", "spell_level": 0, "spell_type": 0 },
+    { "spell_name": "SPPR111", "spell_level": 0, "spell_type": 0 },
+    { "spell_name": "SPPR113", "spell_level": 0, "spell_type": 0 },
+    { "spell_name": "SPPR201", "spell_level": 1, "spell_type": 0 },
+    { "spell_name": "SPPR202", "spell_level": 1, "spell_type": 0 },
+    { "spell_name": "SPPR203", "spell_level": 1, "spell_type": 0 },
+    { "spell_name": "SPPR205", "spell_level": 1, "spell_type": 0 },
+    { "spell_name": "SPPR208", "spell_level": 1, "spell_type": 0 },
+    { "spell_name": "SPPR209", "spell_level": 1, "spell_type": 0 },
+    { "spell_name": "SPPR210", "spell_level": 1, "spell_type": 0 },
+    { "spell_name": "SPPR211", "spell_level": 1, "spell_type": 0 },
+    { "spell_name": "SPPR212", "spell_level": 1, "spell_type": 0 },
+    { "spell_name": "SPPR213", "spell_level": 1, "spell_type": 0 },
+    { "spell_name": "SPPR214", "spell_level": 1, "spell_type": 0 },
+    { "spell_name": "SPPR301", "spell_level": 2, "spell_type": 0 },
+    { "spell_name": "SPPR303", "spell_level": 2, "spell_type": 0 },
+    { "spell_name": "SPPR304", "spell_level": 2, "spell_type": 0 },
+    { "spell_name": "SPPR306", "spell_level": 2, "spell_type": 0 },
+    { "spell_name": "SPPR307", "spell_level": 2, "spell_type": 0 },
+    { "spell_name": "SPPR308", "spell_level": 2, "spell_type": 0 },
+    { "spell_name": "SPPR309", "spell_level": 2, "spell_type": 0 },
+    { "spell_name": "SPPR310", "spell_level": 2, "spell_type": 0 },
+    { "spell_name": "SPPR311", "spell_level": 2, "spell_type": 0 },
+    { "spell_name": "SPPR312", "spell_level": 2, "spell_type": 0 },
+    { "spell_name": "SPPR313", "spell_level": 2, "spell_type": 0 },
+    { "spell_name": "SPPR315", "spell_level": 2, "spell_type": 0 },
+    { "spell_name": "SPPR317", "spell_level": 2, "spell_type": 0 },
+    { "spell_name": "SPPR318", "spell_level": 2, "spell_type": 0 },
+    { "spell_name": "SPPR401", "spell_level": 3, "spell_type": 0 },
+    { "spell_name": "SPPR402", "spell_level": 3, "spell_type": 0 },
+    { "spell_name": "SPPR403", "spell_level": 3, "spell_type": 0 },
+    { "spell_name": "SPPR404", "spell_level": 3, "spell_type": 0 },
+    { "spell_name": "SPPR405", "spell_level": 3, "spell_type": 0 },
+    { "spell_name": "SPPR406", "spell_level": 3, "spell_type": 0 },
+    { "spell_name": "SPPR407", "spell_level": 3, "spell_type": 0 },
+    { "spell_name": "SPPR408", "spell_level": 3, "spell_type": 0 },
+    { "spell_name": "SPPR409", "spell_level": 3, "spell_type": 0 },
+    { "spell_name": "SPPR411", "spell_level": 3, "spell_type": 0 },
+    { "spell_name": "SPPR412", "spell_level": 3, "spell_type": 0 },
+    { "spell_name": "SPPR413", "spell_level": 3, "spell_type": 0 },
+    { "spell_name": "SPPR414", "spell_level": 3, "spell_type": 0 },
+    { "spell_name": "SPPR415", "spell_level": 3, "spell_type": 0 },
+    { "spell_name": "SPPR416", "spell_level": 3, "spell_type": 0 },
+    { "spell_name": "SPPR417", "spell_level": 3, "spell_type": 0 },
+    { "spell_name": "SPPR501", "spell_level": 4, "spell_type": 0 },
+    { "spell_name": "SPPR502", "spell_level": 4, "spell_type": 0 },
+    { "spell_name": "SPPR503", "spell_level": 4, "spell_type": 0 },
+    { "spell_name": "SPPR504", "spell_level": 4, "spell_type": 0 },
+    { "spell_name": "SPPR505", "spell_level": 4, "spell_type": 0 },
+    { "spell_name": "SPPR507", "spell_level": 4, "spell_type": 0 },
+    { "spell_name": "SPPR508", "spell_level": 4, "spell_type": 0 },
+    { "spell_name": "SPPR509", "spell_level": 4, "spell_type": 0 },
+    { "spell_name": "SPPR510", "spell_level": 4, "spell_type": 0 },
+    { "spell_name": "SPPR511", "spell_level": 4, "spell_type": 0 },
+    { "spell_name": "SPPR512", "spell_level": 4, "spell_type": 0 },
+    { "spell_name": "SPPR513", "spell_level": 4, "spell_type": 0 },
+    { "spell_name": "SPPR514", "spell_level": 4, "spell_type": 0 },
+    { "spell_name": "SPPR515", "spell_level": 4, "spell_type": 0 },
+    { "spell_name": "SPWI617", "spell_level": 5, "spell_type": 1 },
+    { "spell_name": "SPWI613", "spell_level": 5, "spell_type": 1 },
+    { "spell_name": "SPWI506", "spell_level": 4, "spell_type": 1 },
+    { "spell_name": "SPWI507", "spell_level": 4, "spell_type": 1 },
+    { "spell_name": "SPWI522", "spell_level": 4, "spell_type": 1 },
+    { "spell_name": "SPWI505", "spell_level": 4, "spell_type": 1 },
+    { "spell_name": "SPWI510", "spell_level": 4, "spell_type": 1 },
+    { "spell_name": "SPWI403", "spell_level": 3, "spell_type": 1 },
+    { "spell_name": "SPWI405", "spell_level": 3, "spell_type": 1 },
+    { "spell_name": "SPWI406", "spell_level": 3, "spell_type": 1 },
+    { "spell_name": "SPWI408", "spell_level": 3, "spell_type": 1 },
+    { "spell_name": "SPWI302", "spell_level": 2, "spell_type": 1 },
+    { "spell_name": "SPWI308", "spell_level": 2, "spell_type": 1 },
+    { "spell_name": "SPWI318", "spell_level": 2, "spell_type": 1 },
+    { "spell_name": "SPWI311", "spell_level": 2, "spell_type": 1 },
+    { "spell_name": "SPWI312", "spell_level": 2, "spell_type": 1 },
+    { "spell_name": "SPWI201", "spell_level": 1, "spell_type": 1 },
+    { "spell_name": "SPWI203", "spell_level": 1, "spell_type": 1 },
+    { "spell_name": "SPWI211", "spell_level": 1, "spell_type": 1 },
+    { "spell_name": "SPWI220", "spell_level": 1, "spell_type": 1 },
+    { "spell_name": "SPWI213", "spell_level": 1, "spell_type": 1 },
+    { "spell_name": "SPWI104", "spell_level": 0, "spell_type": 1 },
+    { "spell_name": "SPWI105", "spell_level": 0, "spell_type": 1 },
+    { "spell_name": "SPWI110", "spell_level": 0, "spell_type": 1 },
+    { "spell_name": "SPWI112", "spell_level": 0, "spell_type": 1 },
+    { "spell_name": "SPWI113", "spell_level": 0, "spell_type": 1 }
   ],
   "spell_memorization_info": [
     {
@@ -727,142 +359,40 @@
     }
   ],
   "memorized_spells": [
-    {
-      "spell_name": "SPPR103",
-      "memorised": 1
-    },
-    {
-      "spell_name": "SPPR103",
-      "memorised": 1
-    },
-    {
-      "spell_name": "SPPR109",
-      "memorised": 1
-    },
-    {
-      "spell_name": "SPPR101",
-      "memorised": 1
-    },
-    {
-      "spell_name": "SPPR203",
-      "memorised": 1
-    },
-    {
-      "spell_name": "SPPR208",
-      "memorised": 1
-    },
-    {
-      "spell_name": "SPPR211",
-      "memorised": 1
-    },
-    {
-      "spell_name": "SPPR212",
-      "memorised": 1
-    },
-    {
-      "spell_name": "SPPR312",
-      "memorised": 1
-    },
-    {
-      "spell_name": "SPPR313",
-      "memorised": 1
-    },
-    {
-      "spell_name": "SPPR315",
-      "memorised": 1
-    },
-    {
-      "spell_name": "SPPR401",
-      "memorised": 1
-    },
-    {
-      "spell_name": "SPPR413",
-      "memorised": 1
-    },
-    {
-      "spell_name": "SPPR411",
-      "memorised": 1
-    },
-    {
-      "spell_name": "SPPR502",
-      "memorised": 1
-    },
-    {
-      "spell_name": "SPPR503",
-      "memorised": 1
-    },
-    {
-      "spell_name": "SPWI113",
-      "memorised": 1
-    },
-    {
-      "spell_name": "SPWI112",
-      "memorised": 1
-    },
-    {
-      "spell_name": "SPWI110",
-      "memorised": 1
-    },
-    {
-      "spell_name": "SPWI105",
-      "memorised": 1
-    },
-    {
-      "spell_name": "SPWI213",
-      "memorised": 1
-    },
-    {
-      "spell_name": "SPWI220",
-      "memorised": 1
-    },
-    {
-      "spell_name": "SPWI211",
-      "memorised": 1
-    },
-    {
-      "spell_name": "SPWI203",
-      "memorised": 1
-    },
-    {
-      "spell_name": "SPWI312",
-      "memorised": 1
-    },
-    {
-      "spell_name": "SPWI311",
-      "memorised": 1
-    },
-    {
-      "spell_name": "SPWI318",
-      "memorised": 1
-    },
-    {
-      "spell_name": "SPWI308",
-      "memorised": 1
-    },
-    {
-      "spell_name": "SPWI408",
-      "memorised": 1
-    },
-    {
-      "spell_name": "SPWI405",
-      "memorised": 1
-    },
-    {
-      "spell_name": "SPWI406",
-      "memorised": 1
-    },
-    {
-      "spell_name": "SPWI510",
-      "memorised": 1
-    },
-    {
-      "spell_name": "SPWI505",
-      "memorised": 1
-    },
-    {
-      "spell_name": "SPWI522",
-      "memorised": 1
-    }
+    { "spell_name": "SPPR103", "memorised": 1 },
+    { "spell_name": "SPPR103", "memorised": 1 },
+    { "spell_name": "SPPR109", "memorised": 1 },
+    { "spell_name": "SPPR101", "memorised": 1 },
+    { "spell_name": "SPPR203", "memorised": 1 },
+    { "spell_name": "SPPR208", "memorised": 1 },
+    { "spell_name": "SPPR211", "memorised": 1 },
+    { "spell_name": "SPPR212", "memorised": 1 },
+    { "spell_name": "SPPR312", "memorised": 1 },
+    { "spell_name": "SPPR313", "memorised": 1 },
+    { "spell_name": "SPPR315", "memorised": 1 },
+    { "spell_name": "SPPR401", "memorised": 1 },
+    { "spell_name": "SPPR413", "memorised": 1 },
+    { "spell_name": "SPPR411", "memorised": 1 },
+    { "spell_name": "SPPR502", "memorised": 1 },
+    { "spell_name": "SPPR503", "memorised": 1 },
+    { "spell_name": "SPWI113", "memorised": 1 },
+    { "spell_name": "SPWI112", "memorised": 1 },
+    { "spell_name": "SPWI110", "memorised": 1 },
+    { "spell_name": "SPWI105", "memorised": 1 },
+    { "spell_name": "SPWI213", "memorised": 1 },
+    { "spell_name": "SPWI220", "memorised": 1 },
+    { "spell_name": "SPWI211", "memorised": 1 },
+    { "spell_name": "SPWI203", "memorised": 1 },
+    { "spell_name": "SPWI312", "memorised": 1 },
+    { "spell_name": "SPWI311", "memorised": 1 },
+    { "spell_name": "SPWI318", "memorised": 1 },
+    { "spell_name": "SPWI308", "memorised": 1 },
+    { "spell_name": "SPWI408", "memorised": 1 },
+    { "spell_name": "SPWI405", "memorised": 1 },
+    { "spell_name": "SPWI406", "memorised": 1 },
+    { "spell_name": "SPWI510", "memorised": 1 },
+    { "spell_name": "SPWI505", "memorised": 1 },
+    { "spell_name": "SPWI522", "memorised": 1 }
   ],
   "currentOffset": 2708,
   "effects": [],

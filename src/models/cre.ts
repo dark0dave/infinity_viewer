@@ -1,4 +1,4 @@
-import { effects_v2_without_headers_parser, header_parser } from "./common";
+import { effect_v1_parser, effect_v2_parser, header_parser } from "./common";
 import { Parser } from "binary-parser";
 
 const creature_header_parser = header_parser()
@@ -19,7 +19,7 @@ const creature_header_parser = header_parser()
   .uint8("leather_color")
   .uint8("armor_color")
   .uint8("hair_color")
-  .uint8("effstructure")
+  .uint8("eff_structure")
   .string("small_portrait", { length: 8, stripNull: true })
   .string("large_portrait", { length: 8, stripNull: true })
   .uint8("reputation")
@@ -195,6 +195,16 @@ const item_slots_parser = new Parser()
   .int16le("weapon_slot_selected")
   .int16le("weapon_ability_selected");
 
+const effect_v1_array_parser = new Parser().array("effects", {
+  type: effect_v1_parser,
+  length: "count_of_effects",
+});
+
+const effect_v2_array_parser = new Parser().array("effects", {
+  type: effect_v2_parser,
+  length: "count_of_effects",
+});
+
 const parser = creature_header_parser
   .array("known_spells", {
     type: known_spells_parser,
@@ -215,10 +225,12 @@ const parser = creature_header_parser
   .seek(function () {
     return this.offset_to_effects - this.currentOffset;
   })
-  // TODO: Use effstructure to parse this better ie it can be an effect v1
-  .array("effects", {
-    type: effects_v2_without_headers_parser,
-    length: "count_of_effects",
+  .choice({
+    tag: "eff_structure",
+    choices: {
+      0: effect_v1_array_parser,
+      1: effect_v2_array_parser,
+    },
   })
   .saveOffset("currentOffset")
   .seek(function () {

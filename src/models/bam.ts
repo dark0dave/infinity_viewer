@@ -106,7 +106,6 @@ const bam_v2_parser = bam_v2_header
   });
 
 // BAMC
-
 const bamc_parser = new Parser()
   .uint32le("uncompressed_data_length")
   .buffer("compressed_data", {

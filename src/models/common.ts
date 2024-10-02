@@ -1,5 +1,44 @@
 import { Parser } from "binary-parser";
 
+const header_parser = () =>
+  new Parser()
+    .endianness("little")
+    .string("signature", {
+      length: 4,
+      stripNull: true,
+      formatter: (sig: string) => {
+        return sig.replaceAll(" ", "");
+      },
+    })
+    .string("version", {
+      length: 4,
+      stripNull: true,
+      formatter: (version: string) => {
+        return version.replaceAll(" ", "");
+      },
+    });
+
+const effect_v1_parser = new Parser()
+  .uint16le("effect_type")
+  .uint8("target_type")
+  .uint8("power")
+  .uint32le("parameter_1")
+  .uint32le("parameter_2")
+  .uint8("timing_mode")
+  .uint8("dispel_resistance")
+  .uint32le("duration")
+  .uint8("probability_1")
+  .uint8("probability_2")
+  .string("resref_key", {
+    length: 8,
+    stripNull: true,
+  })
+  .uint32le("dice_thrown_maximum_level")
+  .uint32le("dice_sides_minimum_level")
+  .uint32le("saving_throw_type")
+  .uint32le("saving_throw_bonus")
+  .uint32le("nown");
+
 const effects_v2_without_headers_parser = new Parser()
   .uint32le("opcode_number")
   .uint32le("target_type")
@@ -46,6 +85,12 @@ const effects_v2_without_headers_parser = new Parser()
     length: 15,
   });
 
+const effect_v2_parser = new Parser().nest("effect_v2", {
+  type: header_parser().nest({
+    type: effects_v2_without_headers_parser,
+  }),
+});
+
 const feature_block_parser = new Parser()
   .uint16le("opcode_number")
   .uint8("target_type")
@@ -70,26 +115,10 @@ const feature_block_parser = new Parser()
   .uint32le("saving_throw_bonus")
   .uint32le("stacking_id");
 
-const header_parser = () =>
-  new Parser()
-    .endianness("little")
-    .string("signature", {
-      length: 4,
-      stripNull: true,
-      formatter: (sig: string) => {
-        return sig.replaceAll(" ", "");
-      },
-    })
-    .string("version", {
-      length: 4,
-      stripNull: true,
-      formatter: (version: string) => {
-        return version.replaceAll(" ", "");
-      },
-    });
-
 export {
+  effect_v1_parser,
   effects_v2_without_headers_parser,
+  effect_v2_parser,
   feature_block_parser,
   header_parser,
 };
