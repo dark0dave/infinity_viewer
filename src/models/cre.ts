@@ -148,10 +148,14 @@ const item_table_parser = new Parser()
   .uint16le("quantity_1")
   .uint16le("quantity_2")
   .uint16le("quantity_3")
-  .uint8("identified")
-  .uint8("unstealable")
-  .uint8("stolen")
-  .uint8("undroppable");
+  .bit4("unused_1")
+  .bit1("undroppable")
+  .bit1("stolen")
+  .bit1("unstealable")
+  .bit1("identified")
+  .seek(function () {
+    return 3;
+  });
 
 const item_slots_parser = new Parser()
   .int16le("helmet")

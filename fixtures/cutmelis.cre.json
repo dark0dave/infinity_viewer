@@ -446,10 +446,11 @@
       "quantity_1": 0,
       "quantity_2": 0,
       "quantity_3": 0,
-      "identified": 0,
-      "unstealable": 0,
+      "unused_1": 0,
+      "undroppable": 0,
       "stolen": 0,
-      "undroppable": 0
+      "unstealable": 0,
+      "identified": 0
     },
     {
       "resource_name": "RING07",
@@ -458,10 +459,11 @@
       "quantity_1": 0,
       "quantity_2": 0,
       "quantity_3": 0,
-      "identified": 0,
-      "unstealable": 0,
+      "unused_1": 0,
+      "undroppable": 0,
       "stolen": 0,
-      "undroppable": 0
+      "unstealable": 0,
+      "identified": 0
     },
     {
       "resource_name": "HELMNOAN",
@@ -470,10 +472,11 @@
       "quantity_1": 0,
       "quantity_2": 0,
       "quantity_3": 0,
-      "identified": 0,
-      "unstealable": 0,
+      "unused_1": 0,
+      "undroppable": 0,
       "stolen": 0,
-      "undroppable": 0
+      "unstealable": 0,
+      "identified": 0
     },
     {
       "resource_name": "IMOENHP1",
@@ -482,10 +485,11 @@
       "quantity_1": 0,
       "quantity_2": 0,
       "quantity_3": 0,
-      "identified": 0,
-      "unstealable": 0,
+      "unused_1": 0,
+      "undroppable": 0,
       "stolen": 0,
-      "undroppable": 0
+      "unstealable": 0,
+      "identified": 0
     },
     {
       "resource_name": "DW#RND08",
@@ -494,10 +498,11 @@
       "quantity_1": 0,
       "quantity_2": 0,
       "quantity_3": 0,
-      "identified": 0,
-      "unstealable": 0,
+      "unused_1": 0,
+      "undroppable": 0,
       "stolen": 0,
-      "undroppable": 0
+      "unstealable": 0,
+      "identified": 0
     },
     {
       "resource_name": "DW#RND16",
@@ -506,10 +511,11 @@
       "quantity_1": 0,
       "quantity_2": 0,
       "quantity_3": 0,
-      "identified": 0,
-      "unstealable": 0,
+      "unused_1": 0,
+      "undroppable": 0,
       "stolen": 0,
-      "undroppable": 0
+      "unstealable": 0,
+      "identified": 0
     }
   ]
 }
