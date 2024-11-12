@@ -1,4 +1,8 @@
-import { feature_block_parser, header_parser } from "./common";
+import {
+  effect_v1_parser,
+  feature_block_parser,
+  header_parser,
+} from "./common";
 import { Parser } from "binary-parser";
 
 const item_header_parser = header_parser()
@@ -73,7 +77,11 @@ const extended_item_header_parser = new Parser()
   })
   .uint16le("is_arrow")
   .uint16le("is_bolt")
-  .uint16le("is_bullet");
+  .uint16le("is_bullet")
+  .array("effects", {
+    type: effect_v1_parser,
+    length: "feature_blocks_count",
+  });
 
 const parser = item_header_parser
   .array("extended_headers", {
