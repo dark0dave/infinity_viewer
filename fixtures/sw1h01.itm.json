@@ -66,7 +66,8 @@
       "melee_animation": [50, 0, 50, 0, 0, 0],
       "is_arrow": 0,
       "is_bolt": 0,
-      "is_bullet": 0
+      "is_bullet": 0,
+      "effects": []
     }
   ],
   "equipping_feature_blocks": [
