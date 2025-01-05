@@ -17,7 +17,9 @@ const tlk_entry = new Parser()
 const parser = tlk_header
   .array("tlk_entries", {
     type: tlk_entry,
-    length: 100,
+    length: function (_item: any) {
+      return Math.min(this?.number_of_string_entries, 100);
+    },
   })
   .saveOffset("currentOffset")
   .seek(function () {
