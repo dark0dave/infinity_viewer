@@ -112,7 +112,7 @@ const bamc_parser = new Parser()
     type: "uint8",
     readUntil: "eof",
     formatter: (buffer: any) => {
-      console.log(buffer);
+      console.debug(buffer);
       try {
         const uncompressed_buffer = zlib.inflateSync(buffer, {
           chunkSize: 8 * 1024,
