@@ -3,7 +3,9 @@ import bam_parser from "./bam";
 import cre_parser from "./cre";
 import eff_parser from "./eff";
 import itm_parser from "./itm";
+import key_parser from "./key";
 import spl_parser from "./spl";
+import tlk_parser from "./tlk";
 import fs from "fs";
 import { Parser } from "binary-parser";
 
@@ -19,8 +21,12 @@ const model_factory = (extension: String): Parser => {
       return eff_parser;
     case "itm":
       return itm_parser;
+    case "key":
+      return key_parser;
     case "spl":
       return spl_parser;
+    case "tlk":
+      return tlk_parser;
     default:
       throw "Not Supported";
   }

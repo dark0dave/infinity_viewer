@@ -5,6 +5,7 @@
       "name": "Run Extension",
       "type": "extensionHost",
       "request": "launch",
+      "preLaunchTask": "npm: package",
       "runtimeExecutable": "${execPath}",
       "args": ["--extensionDevelopmentPath=${workspaceFolder}"],
       "outFiles": ["${workspaceFolder}/out/**/*.js"]

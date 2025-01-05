@@ -20,6 +20,11 @@ Infinity Viewer lets you view infinity engine binary files as json, primary focu
 - ITM files
 - SPL files
 
+## Partial Support
+
+- TLK files, due to the number of strings javascript can not handle parsing 100k+ strings, so we parse the first hundred for now, some kind of scrolling needs to be implemented
+- KEY files, for the same reason as the TLK files, so this is mega/giga slow
+
 ## Todo
 
 Support all the other ie binary file types

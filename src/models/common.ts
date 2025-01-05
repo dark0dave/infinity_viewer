@@ -1,5 +1,15 @@
 import { Parser } from "binary-parser";
 
+const resref = new Parser().string("", {
+  length: 8,
+  formatter: (buffer: string) => {
+    return buffer
+      .split("")
+      .filter((char) => /[a-zA-Z0-9]/.test(char))
+      .join("");
+  },
+});
+
 const header_parser = () =>
   new Parser()
     .endianness("little")
@@ -121,4 +131,5 @@ export {
   effect_v2_parser,
   feature_block_parser,
   header_parser,
+  resref,
 };

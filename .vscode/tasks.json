@@ -13,6 +13,13 @@
         "kind": "build",
         "isDefault": true
       }
+    },
+    {
+      "type": "npm",
+      "script": "package",
+      "problemMatcher": [],
+      "label": "npm: package",
+      "detail": "rm -f infinity-viewer-*.vsix && vsce package"
     }
   ]
 }
