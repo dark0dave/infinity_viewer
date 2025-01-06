@@ -1,12 +1,12 @@
 import { header_parser, resref } from "./common";
 import { Parser } from "binary-parser";
 
-const tlk_header = header_parser()
+const header = header_parser()
   .uint16le("language_id")
   .uint32le("number_of_string_entries")
   .uint32le("offset_to_string_data");
 
-const tlk_entry = new Parser()
+const entry = new Parser()
   .uint16le("bit_field")
   .nest("song_name", { type: resref })
   .uint32le("volume_variance")
@@ -14,9 +14,9 @@ const tlk_entry = new Parser()
   .uint32le("offset_to_string")
   .uint32le("length");
 
-const parser = tlk_header
+const parser = header
   .array("tlk_entries", {
-    type: tlk_entry,
+    type: entry,
     length: function (_item: any) {
       return Math.min(this?.number_of_string_entries, 100);
     },

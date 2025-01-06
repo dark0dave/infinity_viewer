@@ -1,5 +1,6 @@
 import are_parser from "./are";
 import bam_parser from "./bam";
+import bif_parser from "./bif";
 import cre_parser from "./cre";
 import eff_parser from "./eff";
 import itm_parser from "./itm";
@@ -15,6 +16,8 @@ const model_factory = (extension: String): Parser => {
       return are_parser;
     case "bam":
       return bam_parser;
+    case "bif":
+      return bif_parser;
     case "cre":
       return cre_parser;
     case "eff":

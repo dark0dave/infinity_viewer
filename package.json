@@ -2,7 +2,7 @@
   "name": "infinity-viewer",
   "displayName": "infinity-viewer",
   "description": "Infinity Viewer lets you view infinity engine binary files as json",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "keywords": [
     "Infinity Engine",
     "Baldur's Gate",
@@ -51,6 +51,12 @@
           },
           {
             "filenamePattern": "*.BAM"
+          },
+          {
+            "filenamePattern": "*.bif"
+          },
+          {
+            "filenamePattern": "*.BIF"
           },
           {
             "filenamePattern": "*.cre"
