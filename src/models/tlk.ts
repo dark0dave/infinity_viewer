@@ -25,19 +25,25 @@ const parser = header
   .seek(function () {
     return this.offset_to_string_data - this.currentOffset;
   })
-  .buffer("string_data", {
+  .string("string_data", {
     formatter: function (buffer: Buffer) {
       const newBuffer = [];
-      this?.tlk_entries?.forEach((element) => {
-        const item = buffer.subarray(
-          element.offset_to_string,
-          element.offset_to_string + element.length,
-        );
-        newBuffer.push(item.toString());
-      });
+      if (buffer) {
+        this?.tlk_entries?.forEach((element) => {
+          const item = buffer.subarray(
+            element.offset_to_string,
+            element.offset_to_string + element.length,
+          );
+          newBuffer.push(item.toString());
+        });
+      }
       return newBuffer;
     },
-    length: "number_of_string_entries",
+    length: function (_item: any) {
+      return (
+        this?.tlk_entries.reduce((a: any, b: any) => a.length + b.length) || 0
+      );
+    },
   });
 
 export default parser;
