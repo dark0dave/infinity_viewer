@@ -5,6 +5,7 @@ import cre_parser from "./cre";
 import eff_parser from "./eff";
 import itm_parser from "./itm";
 import key_parser from "./key";
+import sto_parser from "./sto";
 import spl_parser from "./spl";
 import tlk_parser from "./tlk";
 import fs from "fs";
@@ -26,6 +27,8 @@ const model_factory = (extension: String): Parser => {
       return itm_parser;
     case "key":
       return key_parser;
+    case "sto":
+      return sto_parser;
     case "spl":
       return spl_parser;
     case "tlk":

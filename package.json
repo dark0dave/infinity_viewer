@@ -83,6 +83,12 @@
             "filenamePattern": "*.KEY"
           },
           {
+            "filenamePattern": "*.sto"
+          },
+          {
+            "filenamePattern": "*.STO"
+          },
+          {
             "filenamePattern": "*.spl"
           },
           {
