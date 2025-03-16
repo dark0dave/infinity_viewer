@@ -18,6 +18,7 @@ Infinity Viewer lets you view infinity engine binary files as json, primary focu
 - CRE files
 - EFF files
 - ITM files
+- STO files
 - SPL files
 
 ## Partial Support
