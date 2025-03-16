@@ -4,6 +4,7 @@ import bam_parser from "../models/bam";
 import cre_parser from "../models/cre";
 import eff_parser from "../models/eff";
 import itm_parser from "../models/itm";
+import sto_parser from "../models/sto";
 import spl_parser from "../models/spl";
 import * as fs from "fs";
 import * as path from "path";
@@ -82,6 +83,18 @@ suite("Extension Test Suite", () => {
       .trim(),
   );
 
+  const sto_file = fs.readFileSync(
+    path.normalize(`${root}/fixtures/ohbconco.sto`),
+  );
+  const sto_file_json = JSON.parse(
+    fs
+      .readFileSync(
+        path.normalize(`${root}/fixtures/ohbconco.sto.json`),
+        "utf8",
+      )
+      .trim(),
+  );
+
   const spl_file = fs.readFileSync(
     path.normalize(`${root}/fixtures/gate1.spl`),
   );
@@ -131,6 +144,13 @@ suite("Extension Test Suite", () => {
     assert.strictEqual(
       JSON.stringify(itm_parser.parse(itm_file)),
       JSON.stringify(itm_file_json),
+    );
+  });
+
+  test("Store Tests", () => {
+    assert.strictEqual(
+      JSON.stringify(sto_parser.parse(sto_file)),
+      JSON.stringify(sto_file_json),
     );
   });
 

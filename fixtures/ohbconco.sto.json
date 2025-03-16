@@ -1,0 +1,429 @@
+{
+  "signature": "STOR",
+  "version": "V1.0",
+  "type": 0,
+  "name": 88920,
+  "flags": [3, 32, 0, 0],
+  "sell_price_markup": 125,
+  "buy_price_markup": 30,
+  "depreciation_rate": 0,
+  "percentage_chance_steal_failure": 0,
+  "capacity": 0,
+  "unknown": [0, 0, 0, 0, 0, 0, 0, 0],
+  "offset_to_items_purchased": 156,
+  "count_of_items_purchased": 1,
+  "offset_to_items_for_sale": 160,
+  "count_of_items_for_sale": 39,
+  "lore": 0,
+  "id_price": 0,
+  "rumours_tavern": "",
+  "offset_to_drinks": 1252,
+  "count_of_drinks": 0,
+  "rumours_temple": "",
+  "room_flags": [0, 0, 0, 0],
+  "price_of_a_peasant_room": 0,
+  "price_of_a_merchant_room": 0,
+  "price_of_a_noble_room": 0,
+  "price_of_a_royal_room": 0,
+  "offset_to_cures": 1252,
+  "count_of_cures": 0,
+  "unused": [
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+  ],
+  "items_purchased": [9],
+  "items_for_sale": [
+    {
+      "filename": "POTN08",
+      "item_expiration_time": 0,
+      "charges_1": 1,
+      "charges_2": 0,
+      "charges_3": 0,
+      "flags": 1,
+      "amount": 1,
+      "infinite_supply_flag": 1
+    },
+    {
+      "filename": "POTN52",
+      "item_expiration_time": 0,
+      "charges_1": 1,
+      "charges_2": 0,
+      "charges_3": 0,
+      "flags": 1,
+      "amount": 1,
+      "infinite_supply_flag": 1
+    },
+    {
+      "filename": "POTN20",
+      "item_expiration_time": 0,
+      "charges_1": 1,
+      "charges_2": 0,
+      "charges_3": 0,
+      "flags": 1,
+      "amount": 1,
+      "infinite_supply_flag": 1
+    },
+    {
+      "filename": "POTN17",
+      "item_expiration_time": 0,
+      "charges_1": 1,
+      "charges_2": 0,
+      "charges_3": 0,
+      "flags": 1,
+      "amount": 1,
+      "infinite_supply_flag": 1
+    },
+    {
+      "filename": "POTN42",
+      "item_expiration_time": 0,
+      "charges_1": 1,
+      "charges_2": 0,
+      "charges_3": 0,
+      "flags": 1,
+      "amount": 1,
+      "infinite_supply_flag": 1
+    },
+    {
+      "filename": "POTN44",
+      "item_expiration_time": 0,
+      "charges_1": 1,
+      "charges_2": 0,
+      "charges_3": 0,
+      "flags": 1,
+      "amount": 1,
+      "infinite_supply_flag": 1
+    },
+    {
+      "filename": "POTN19",
+      "item_expiration_time": 0,
+      "charges_1": 1,
+      "charges_2": 0,
+      "charges_3": 0,
+      "flags": 1,
+      "amount": 1,
+      "infinite_supply_flag": 1
+    },
+    {
+      "filename": "POTN28",
+      "item_expiration_time": 0,
+      "charges_1": 1,
+      "charges_2": 0,
+      "charges_3": 0,
+      "flags": 1,
+      "amount": 1,
+      "infinite_supply_flag": 1
+    },
+    {
+      "filename": "POTN29",
+      "item_expiration_time": 0,
+      "charges_1": 1,
+      "charges_2": 0,
+      "charges_3": 0,
+      "flags": 1,
+      "amount": 1,
+      "infinite_supply_flag": 1
+    },
+    {
+      "filename": "POTN43",
+      "item_expiration_time": 0,
+      "charges_1": 1,
+      "charges_2": 0,
+      "charges_3": 0,
+      "flags": 1,
+      "amount": 1,
+      "infinite_supply_flag": 1
+    },
+    {
+      "filename": "POTN37",
+      "item_expiration_time": 0,
+      "charges_1": 1,
+      "charges_2": 0,
+      "charges_3": 0,
+      "flags": 1,
+      "amount": 1,
+      "infinite_supply_flag": 1
+    },
+    {
+      "filename": "POTN03",
+      "item_expiration_time": 0,
+      "charges_1": 1,
+      "charges_2": 0,
+      "charges_3": 0,
+      "flags": 1,
+      "amount": 10,
+      "infinite_supply_flag": 0
+    },
+    {
+      "filename": "POTN12",
+      "item_expiration_time": 0,
+      "charges_1": 1,
+      "charges_2": 0,
+      "charges_3": 0,
+      "flags": 1,
+      "amount": 5,
+      "infinite_supply_flag": 0
+    },
+    {
+      "filename": "POTN04",
+      "item_expiration_time": 0,
+      "charges_1": 1,
+      "charges_2": 0,
+      "charges_3": 0,
+      "flags": 1,
+      "amount": 4,
+      "infinite_supply_flag": 0
+    },
+    {
+      "filename": "POTN05",
+      "item_expiration_time": 0,
+      "charges_1": 1,
+      "charges_2": 0,
+      "charges_3": 0,
+      "flags": 1,
+      "amount": 3,
+      "infinite_supply_flag": 0
+    },
+    {
+      "filename": "POTN06",
+      "item_expiration_time": 0,
+      "charges_1": 1,
+      "charges_2": 0,
+      "charges_3": 0,
+      "flags": 1,
+      "amount": 2,
+      "infinite_supply_flag": 0
+    },
+    {
+      "filename": "POTN07",
+      "item_expiration_time": 0,
+      "charges_1": 1,
+      "charges_2": 0,
+      "charges_3": 0,
+      "flags": 1,
+      "amount": 1,
+      "infinite_supply_flag": 0
+    },
+    {
+      "filename": "POTN09",
+      "item_expiration_time": 0,
+      "charges_1": 1,
+      "charges_2": 0,
+      "charges_3": 0,
+      "flags": 1,
+      "amount": 10,
+      "infinite_supply_flag": 0
+    },
+    {
+      "filename": "POTN14",
+      "item_expiration_time": 0,
+      "charges_1": 1,
+      "charges_2": 0,
+      "charges_3": 0,
+      "flags": 1,
+      "amount": 5,
+      "infinite_supply_flag": 0
+    },
+    {
+      "filename": "POTN41",
+      "item_expiration_time": 0,
+      "charges_1": 1,
+      "charges_2": 0,
+      "charges_3": 0,
+      "flags": 1,
+      "amount": 5,
+      "infinite_supply_flag": 0
+    },
+    {
+      "filename": "POTN22",
+      "item_expiration_time": 0,
+      "charges_1": 1,
+      "charges_2": 0,
+      "charges_3": 0,
+      "flags": 1,
+      "amount": 1,
+      "infinite_supply_flag": 1
+    },
+    {
+      "filename": "POTN31",
+      "item_expiration_time": 0,
+      "charges_1": 1,
+      "charges_2": 0,
+      "charges_3": 0,
+      "flags": 1,
+      "amount": 1,
+      "infinite_supply_flag": 1
+    },
+    {
+      "filename": "POTN02",
+      "item_expiration_time": 0,
+      "charges_1": 1,
+      "charges_2": 0,
+      "charges_3": 0,
+      "flags": 1,
+      "amount": 1,
+      "infinite_supply_flag": 1
+    },
+    {
+      "filename": "POTN34",
+      "item_expiration_time": 0,
+      "charges_1": 1,
+      "charges_2": 0,
+      "charges_3": 0,
+      "flags": 1,
+      "amount": 5,
+      "infinite_supply_flag": 0
+    },
+    {
+      "filename": "POTN35",
+      "item_expiration_time": 0,
+      "charges_1": 1,
+      "charges_2": 0,
+      "charges_3": 0,
+      "flags": 1,
+      "amount": 5,
+      "infinite_supply_flag": 0
+    },
+    {
+      "filename": "POTN38",
+      "item_expiration_time": 0,
+      "charges_1": 1,
+      "charges_2": 0,
+      "charges_3": 0,
+      "flags": 1,
+      "amount": 1,
+      "infinite_supply_flag": 1
+    },
+    {
+      "filename": "POTN24",
+      "item_expiration_time": 0,
+      "charges_1": 1,
+      "charges_2": 0,
+      "charges_3": 0,
+      "flags": 1,
+      "amount": 1,
+      "infinite_supply_flag": 1
+    },
+    {
+      "filename": "POTN11",
+      "item_expiration_time": 0,
+      "charges_1": 1,
+      "charges_2": 0,
+      "charges_3": 0,
+      "flags": 1,
+      "amount": 5,
+      "infinite_supply_flag": 0
+    },
+    {
+      "filename": "POTN46",
+      "item_expiration_time": 0,
+      "charges_1": 1,
+      "charges_2": 0,
+      "charges_3": 0,
+      "flags": 1,
+      "amount": 1,
+      "infinite_supply_flag": 1
+    },
+    {
+      "filename": "POTN18",
+      "item_expiration_time": 0,
+      "charges_1": 1,
+      "charges_2": 0,
+      "charges_3": 0,
+      "flags": 1,
+      "amount": 1,
+      "infinite_supply_flag": 1
+    },
+    {
+      "filename": "POTN30",
+      "item_expiration_time": 0,
+      "charges_1": 1,
+      "charges_2": 0,
+      "charges_3": 0,
+      "flags": 1,
+      "amount": 1,
+      "infinite_supply_flag": 1
+    },
+    {
+      "filename": "POTN39",
+      "item_expiration_time": 0,
+      "charges_1": 5,
+      "charges_2": 0,
+      "charges_3": 0,
+      "flags": 1,
+      "amount": 1,
+      "infinite_supply_flag": 0
+    },
+    {
+      "filename": "POTN36",
+      "item_expiration_time": 0,
+      "charges_1": 5,
+      "charges_2": 0,
+      "charges_3": 0,
+      "flags": 1,
+      "amount": 1,
+      "infinite_supply_flag": 0
+    },
+    {
+      "filename": "POTN10",
+      "item_expiration_time": 0,
+      "charges_1": 1,
+      "charges_2": 0,
+      "charges_3": 0,
+      "flags": 1,
+      "amount": 15,
+      "infinite_supply_flag": 0
+    },
+    {
+      "filename": "POTN21",
+      "item_expiration_time": 0,
+      "charges_1": 1,
+      "charges_2": 0,
+      "charges_3": 0,
+      "flags": 1,
+      "amount": 10,
+      "infinite_supply_flag": 0
+    },
+    {
+      "filename": "POTN45",
+      "item_expiration_time": 0,
+      "charges_1": 1,
+      "charges_2": 0,
+      "charges_3": 0,
+      "flags": 1,
+      "amount": 10,
+      "infinite_supply_flag": 0
+    },
+    {
+      "filename": "POTN13",
+      "item_expiration_time": 0,
+      "charges_1": 1,
+      "charges_2": 0,
+      "charges_3": 0,
+      "flags": 1,
+      "amount": 1,
+      "infinite_supply_flag": 1
+    },
+    {
+      "filename": "POTN27",
+      "item_expiration_time": 0,
+      "charges_1": 18,
+      "charges_2": 0,
+      "charges_3": 0,
+      "flags": 1,
+      "amount": 1,
+      "infinite_supply_flag": 0
+    },
+    {
+      "filename": "POTN26",
+      "item_expiration_time": 0,
+      "charges_1": 18,
+      "charges_2": 0,
+      "charges_3": 0,
+      "flags": 1,
+      "amount": 1,
+      "infinite_supply_flag": 0
+    }
+  ],
+  "drinks": [],
+  "cures": []
+}
