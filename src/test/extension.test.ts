@@ -4,8 +4,9 @@ import bam_parser from "../models/bam";
 import cre_parser from "../models/cre";
 import eff_parser from "../models/eff";
 import itm_parser from "../models/itm";
-import sto_parser from "../models/sto";
 import spl_parser from "../models/spl";
+import sto_parser from "../models/sto";
+import vvc_parser from "../models/vvc";
 import * as fs from "fs";
 import * as path from "path";
 import * as vscode from "vscode";
@@ -83,6 +84,15 @@ suite("Extension Test Suite", () => {
       .trim(),
   );
 
+  const spl_file = fs.readFileSync(
+    path.normalize(`${root}/fixtures/gate1.spl`),
+  );
+  const spl_file_json = JSON.parse(
+    fs
+      .readFileSync(path.normalize(`${root}/fixtures/gate1.spl.json`), "utf8")
+      .trim(),
+  );
+
   const sto_file = fs.readFileSync(
     path.normalize(`${root}/fixtures/ohbconco.sto`),
   );
@@ -95,12 +105,15 @@ suite("Extension Test Suite", () => {
       .trim(),
   );
 
-  const spl_file = fs.readFileSync(
-    path.normalize(`${root}/fixtures/gate1.spl`),
+  const vvc_file = fs.readFileSync(
+    path.normalize(`${root}/fixtures/p_fireta.vvc`),
   );
-  const spl_file_json = JSON.parse(
+  const vvc_file_json = JSON.parse(
     fs
-      .readFileSync(path.normalize(`${root}/fixtures/gate1.spl.json`), "utf8")
+      .readFileSync(
+        path.normalize(`${root}/fixtures/p_fireta.vvc.json`),
+        "utf8",
+      )
       .trim(),
   );
 
@@ -158,6 +171,13 @@ suite("Extension Test Suite", () => {
     assert.strictEqual(
       JSON.stringify(spl_parser.parse(spl_file)),
       JSON.stringify(spl_file_json),
+    );
+  });
+
+  test("VVC Tests", () => {
+    assert.strictEqual(
+      JSON.stringify(vvc_parser.parse(vvc_file)),
+      JSON.stringify(vvc_file_json),
     );
   });
 });

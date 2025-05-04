@@ -1,13 +1,19 @@
 import { Parser } from "binary-parser";
 
-const resref = new Parser().string("", {
+const printableAsciiFormatter = (str: String) => {
+  let buffer = "";
+  for (let i = 0, len = str.length; i < len; i++) {
+    const code = str?.charCodeAt(i);
+    if (code > 31 && code < 127) {
+      buffer += str?.at(i);
+    }
+  }
+  return buffer;
+};
+
+const resref = new Parser().endianness("little").string("", {
   length: 8,
-  formatter: (buffer: string) => {
-    return buffer
-      .split("")
-      .filter((char) => /[a-zA-Z0-9]/.test(char))
-      .join("");
-  },
+  formatter: printableAsciiFormatter,
 });
 
 const header_parser = () =>
@@ -15,14 +21,12 @@ const header_parser = () =>
     .endianness("little")
     .string("signature", {
       length: 4,
-      stripNull: true,
       formatter: (sig: string) => {
         return sig.replaceAll(" ", "");
       },
     })
     .string("version", {
       length: 4,
-      stripNull: true,
       formatter: (version: string) => {
         return version.replaceAll(" ", "");
       },

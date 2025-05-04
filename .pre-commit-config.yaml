@@ -27,6 +27,7 @@ repos:
     rev: 3.0.0
     hooks:
       - id: forbid-binary
+        stages: [pre-commit]
         exclude: >
           (?x)^(
             fixtures/.*| icon.png | large_icon.png
