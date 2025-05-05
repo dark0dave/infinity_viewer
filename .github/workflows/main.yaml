@@ -27,11 +27,11 @@ jobs:
       matrix:
         include:
           - os: macos-latest
-            test_cmd: npm test
+            test_cmd: DEBUG=* npm test
           - os: ubuntu-latest
-            test_cmd: xvfb-run -a npm test
+            test_cmd: DEBUG=* xvfb-run -a npm test
           - os: windows-latest
-            test_cmd: ROOT="../../" npm test
+            test_cmd: DEBUG=* ROOT="../../" npm test
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4

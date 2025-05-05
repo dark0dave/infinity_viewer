@@ -8,7 +8,9 @@ import key_parser from "./key";
 import sto_parser from "./sto";
 import spl_parser from "./spl";
 import tlk_parser from "./tlk";
+import vvc_parser from "./vvc";
 import fs from "fs";
+import path from "path";
 import { Parser } from "binary-parser";
 
 const model_factory = (extension: String): Parser => {
@@ -33,6 +35,8 @@ const model_factory = (extension: String): Parser => {
       return spl_parser;
     case "tlk":
       return tlk_parser;
+    case "vvc":
+      return vvc_parser;
     default:
       throw "Not Supported";
   }
@@ -47,18 +51,18 @@ const getFileContents = (path: fs.PathLike): Buffer => {
   }
 };
 
-const factory = (path: fs.PathLike): String => {
-  const buffer = getFileContents(path);
-  const extension = path
-    .toString()
-    .toLowerCase()
-    .substring(path.toString().lastIndexOf(".") + 1, path.toString().length);
-  const parser = model_factory(extension);
+const factory = (file_path: fs.PathLike): Object => {
+  const buffer = getFileContents(file_path);
+  const extension = path.extname(file_path.toString());
   try {
+    const parser = model_factory(extension);
     return parser.parse(buffer);
   } catch (e) {
-    console.error(`Failed to parse ${path} with ${JSON.stringify(e)}`);
-    throw e;
+    console.error(`Failed to parse ${file_path} with ${JSON.stringify(e)}`);
+    return {
+      error: "failed to parse file",
+      file_contents: buffer.toJSON(),
+    };
   }
 };
 
