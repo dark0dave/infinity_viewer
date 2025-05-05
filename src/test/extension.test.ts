@@ -2,6 +2,7 @@ import * as assert from "assert";
 import are_parser from "../models/are";
 import bam_parser from "../models/bam";
 import cre_parser from "../models/cre";
+import dlg_parser from "../models/dlg";
 import eff_parser from "../models/eff";
 import itm_parser from "../models/itm";
 import spl_parser from "../models/spl";
@@ -60,6 +61,15 @@ suite("Extension Test Suite", () => {
         path.normalize(`${root}/fixtures/cutmelis.cre.json`),
         "utf8",
       )
+      .trim(),
+  );
+
+  const dlg_file = fs.readFileSync(
+    path.normalize(`${root}/fixtures/mazzy.dlg`),
+  );
+  const dlg_file_json = JSON.parse(
+    fs
+      .readFileSync(path.normalize(`${root}/fixtures/mazzy.dlg.json`), "utf8")
       .trim(),
   );
 
@@ -143,6 +153,13 @@ suite("Extension Test Suite", () => {
     assert.strictEqual(
       JSON.stringify(cre_parser.parse(cre_file)),
       JSON.stringify(cre_file_json),
+    );
+  });
+
+  test("Dialogue Tests", () => {
+    assert.strictEqual(
+      JSON.stringify(dlg_parser.parse(dlg_file)),
+      JSON.stringify(dlg_file_json),
     );
   });
 

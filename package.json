@@ -65,6 +65,12 @@
             "filenamePattern": "*.CRE"
           },
           {
+            "filenamePattern": "*.dlg"
+          },
+          {
+            "filenamePattern": "*.DLG"
+          },
+          {
             "filenamePattern": "*.eff"
           },
           {
@@ -135,7 +141,6 @@
     "binary-parser": "^2.2.1"
   },
   "devDependencies": {
-    "@types/mocha": "^10.0.7",
     "@types/node": "^22.5.5",
     "@types/vscode": "^1.80.0",
     "@vscode/test-cli": "^0.0.9",
