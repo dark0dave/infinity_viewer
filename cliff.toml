@@ -23,6 +23,9 @@ body = """
             {% else %} by [{{ commit.author.name }}](https://github.com/{{ commit.author.name }}){%- endif %}\
     {%- endfor -%}
 {% endfor %}
+
+VSCode Marketplace: https://marketplace.visualstudio.com/items?itemName=dark0dave.infinity-viewer
+
 {% if version %}
     {% if previous.version %}\
 Full Changelog: [{{ previous.version }}...{{ version }}]({{ self::remote_url() }}/compare/{{ previous.version }}...{{ version }})\

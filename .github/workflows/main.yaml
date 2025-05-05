@@ -17,9 +17,6 @@ jobs:
         with:
           set-safe-directory: true
       - uses: actions/setup-python@v5
-      - uses: actions-rs/toolchain@v1
-        with:
-          toolchain: stable
       - uses: pre-commit/action@v3.0.1
   test:
     runs-on: ${{ matrix.os }}

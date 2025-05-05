@@ -14,3 +14,4 @@ cliff.toml
 fixtures
 .vscode-test.mjs
 large_icon.png
+.envrc-sample
