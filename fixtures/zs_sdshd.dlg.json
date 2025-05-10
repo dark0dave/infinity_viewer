@@ -1,0 +1,164 @@
+{
+  "signature": "DLG",
+  "version": "V1.0",
+  "count_of_state_tables": 3,
+  "offset_to_state_table": 52,
+  "count_of_transitions": 9,
+  "offset_to_transition_table": 100,
+  "offset_to_state_trigger_table": 388,
+  "count_of_state_triggers": 2,
+  "offset_to_transition_trigger_table": 404,
+  "count_of_transition_triggers": 0,
+  "offset_to_action_table": 404,
+  "count_of_action_tables": 8,
+  "flags": [0, 0, 0, 0],
+  "state_tables": [
+    {
+      "actor_response_text": 103646,
+      "index_of_the_first_transition": 0,
+      "count_of_transitions": 4,
+      "index_of_state_trigger": 0
+    },
+    {
+      "actor_response_text": 103651,
+      "index_of_the_first_transition": 4,
+      "count_of_transitions": 4,
+      "index_of_state_trigger": 1
+    },
+    {
+      "actor_response_text": 103652,
+      "index_of_the_first_transition": 8,
+      "count_of_transitions": 1,
+      "index_of_state_trigger": -1
+    }
+  ],
+  "transitions": [
+    {
+      "flags": [5, 0, 0, 0],
+      "player_character_text": 103647,
+      "journal_text": 0,
+      "index_of_transitions_trigger": 0,
+      "index_of_transitions_action_table": 0,
+      "resource_name": "ZS_SDSHD",
+      "index_of_the_next_state": 2
+    },
+    {
+      "flags": [5, 0, 0, 0],
+      "player_character_text": 103648,
+      "journal_text": 0,
+      "index_of_transitions_trigger": 0,
+      "index_of_transitions_action_table": 1,
+      "resource_name": "ZS_SDSHD",
+      "index_of_the_next_state": 2
+    },
+    {
+      "flags": [5, 0, 0, 0],
+      "player_character_text": 103649,
+      "journal_text": 0,
+      "index_of_transitions_trigger": 0,
+      "index_of_transitions_action_table": 2,
+      "resource_name": "ZS_SDSHD",
+      "index_of_the_next_state": 2
+    },
+    {
+      "flags": [5, 0, 0, 0],
+      "player_character_text": 103650,
+      "journal_text": 0,
+      "index_of_transitions_trigger": 0,
+      "index_of_transitions_action_table": 3,
+      "resource_name": "ZS_SDSHD",
+      "index_of_the_next_state": 2
+    },
+    {
+      "flags": [5, 0, 0, 0],
+      "player_character_text": 103647,
+      "journal_text": 0,
+      "index_of_transitions_trigger": 0,
+      "index_of_transitions_action_table": 4,
+      "resource_name": "ZS_SDSHD",
+      "index_of_the_next_state": 2
+    },
+    {
+      "flags": [5, 0, 0, 0],
+      "player_character_text": 103648,
+      "journal_text": 0,
+      "index_of_transitions_trigger": 0,
+      "index_of_transitions_action_table": 5,
+      "resource_name": "ZS_SDSHD",
+      "index_of_the_next_state": 2
+    },
+    {
+      "flags": [5, 0, 0, 0],
+      "player_character_text": 103649,
+      "journal_text": 0,
+      "index_of_transitions_trigger": 0,
+      "index_of_transitions_action_table": 6,
+      "resource_name": "ZS_SDSHD",
+      "index_of_the_next_state": 2
+    },
+    {
+      "flags": [5, 0, 0, 0],
+      "player_character_text": 103650,
+      "journal_text": 0,
+      "index_of_transitions_trigger": 0,
+      "index_of_transitions_action_table": 7,
+      "resource_name": "ZS_SDSHD",
+      "index_of_the_next_state": 2
+    },
+    {
+      "flags": [8, 0, 0, 0],
+      "player_character_text": 4294967295,
+      "journal_text": 0,
+      "index_of_transitions_trigger": 0,
+      "index_of_transitions_action_table": 0,
+      "resource_name": "",
+      "index_of_the_next_state": 0
+    }
+  ],
+  "state_triggers": [
+    {
+      "offset_to_start_of_file": 468,
+      "length_in_bytes": 35
+    },
+    {
+      "offset_to_start_of_file": 503,
+      "length_in_bytes": 35
+    }
+  ],
+  "transition_triggers": [],
+  "action_tables": [
+    {
+      "offset_to_start_of_file": 538,
+      "length_in_bytes": 76
+    },
+    {
+      "offset_to_start_of_file": 614,
+      "length_in_bytes": 76
+    },
+    {
+      "offset_to_start_of_file": 690,
+      "length_in_bytes": 76
+    },
+    {
+      "offset_to_start_of_file": 766,
+      "length_in_bytes": 36
+    },
+    {
+      "offset_to_start_of_file": 802,
+      "length_in_bytes": 76
+    },
+    {
+      "offset_to_start_of_file": 878,
+      "length_in_bytes": 76
+    },
+    {
+      "offset_to_start_of_file": 954,
+      "length_in_bytes": 76
+    },
+    {
+      "offset_to_start_of_file": 1030,
+      "length_in_bytes": 36
+    }
+  ],
+  "contents": "  Global(\"ZS_SHD_MET\",\"LOCALS\",0)\r\n  Global(\"ZS_SHD_MET\",\"LOCALS\",1)\r\nSetGlobal(\"ZS_SDSHD_STRAT\",\"LOCALS\",0)\r\nSetGlobal(\"ZS_SHD_MET\",\"LOCALS\",1)\r\nSetGlobal(\"ZS_SDSHD_STRAT\",\"LOCALS\",1)\r\nSetGlobal(\"ZS_SHD_MET\",\"LOCALS\",1)\r\nSetGlobal(\"ZS_SDSHD_STRAT\",\"LOCALS\",3)\r\nSetGlobal(\"ZS_SHD_MET\",\"LOCALS\",1)\r\nSetGlobal(\"ZS_SHD_MET\",\"LOCALS\",1)\r\nSetGlobal(\"ZS_SDSHD_STRAT\",\"LOCALS\",0)\r\nSetGlobal(\"ZS_SHD_MET\",\"LOCALS\",1)\r\nSetGlobal(\"ZS_SDSHD_STRAT\",\"LOCALS\",1)\r\nSetGlobal(\"ZS_SHD_MET\",\"LOCALS\",1)\r\nSetGlobal(\"ZS_SDSHD_STRAT\",\"LOCALS\",3)\r\nSetGlobal(\"ZS_SHD_MET\",\"LOCALS\",1)\r\nSetGlobal(\"ZS_SHD_MET\",\"LOCALS\",1)\r\n"
+}
