@@ -74,6 +74,7 @@ export class InfinityPreview extends Disposable {
 
   private reload(): void {
     if (this._previewState !== "Disposed") {
+      this.setWebviewContents();
       this.webviewEditor.webview.postMessage({ type: "reload" });
     }
   }

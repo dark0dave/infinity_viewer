@@ -56,7 +56,7 @@ const getFileContents = (path: fs.PathLike): Buffer => {
 
 const factory = (file_path: fs.PathLike): Object => {
   const buffer = getFileContents(file_path);
-  const extension = path.extname(file_path.toString());
+  const extension = path.extname(file_path.toString()).replace(".", "");
   try {
     const parser = model_factory(extension);
     return parser.parse(buffer);
@@ -64,6 +64,8 @@ const factory = (file_path: fs.PathLike): Object => {
     console.error(`Failed to parse ${file_path} with ${JSON.stringify(e)}`);
     return {
       error: "failed to parse file",
+      file_path,
+      extension,
       file_contents: buffer.toJSON(),
     };
   }
