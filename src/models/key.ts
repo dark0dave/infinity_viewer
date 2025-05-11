@@ -29,7 +29,7 @@ const parser = header
     formatter: function (buffer: any) {
       return buffer.split("\u0000").filter((x: any) => x);
     },
-    length: function (_item: any) {
+    length: function () {
       return (
         this?.index_to_resource_entries -
         (this?.index_to_bif_entries + this?.count_of_bif_entries * 12)

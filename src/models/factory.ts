@@ -14,7 +14,7 @@ import fs from "fs";
 import path from "path";
 import { Parser } from "binary-parser";
 
-const model_factory = (extension: String): Parser => {
+const model_factory = (extension: String): any => {
   switch (extension) {
     case "are":
       return are_parser;

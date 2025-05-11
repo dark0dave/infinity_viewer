@@ -1,7 +1,13 @@
 import { Parser } from "binary-parser";
 
-const printableAsciiFormatter = (str: String) => {
+const printableAsciiFormatter = (data: any) => {
   let buffer = "";
+  let str = "";
+  try {
+    str = data?.toString();
+  } catch (e) {
+    return buffer;
+  }
   for (let i = 0, len = str.length; i < len; i++) {
     const code = str?.charCodeAt(i);
     if (code > 31 && code < 127) {

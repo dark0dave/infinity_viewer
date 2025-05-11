@@ -1,17 +1,22 @@
 {
   "compilerOptions": {
-    "module": "Node16",
+    "module": "NodeNext",
     "target": "ES2022",
     "outDir": "out",
     "lib": ["ES2022"],
-    "sourceMap": true,
     "paths": {
       "@/*": ["./src/*"]
     },
     "allowJs": true,
-    "strict": false,
+    "skipLibCheck": true,
     "noImplicitReturns": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+
+    /* Linting */
+    "checkJs": false,
+    "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUnusedParameters": true
+    "sourceMap": true
   }
 }

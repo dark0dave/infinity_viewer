@@ -91,13 +91,51 @@ export class InfinityPreview extends Disposable {
     this._previewState = "Visible";
   }
 
+  // https://github.com/tower1229/Vue-Tree-Chart/blob/master/src/components/TreeChart.vue
+  private generateTree(tree: Object): string {
+    return `
+    <table>
+      <tr>
+        <td :colspan="Array.isArray(tree.children) ? tree.children.length * 2 : 1" 
+          :class="{parentLevel: Array.isArray(tree.children) && tree.children.length, extend: Array.isArray(tree.children) && tree.children.length}"
+        >
+          <div :class="{node: true, hasMate: tree.mate}">
+            <div class="person" 
+              :class="Array.isArray(tree.class) ? tree.class : []"
+            >
+              <div class="name">{{tree.name}}</div>
+            </div>
+            <template v-if="Array.isArray(tree.mate) && tree.mate.length">
+              <div class="person" v-for="(mate, mateIndex) in tree.mate" :key="tree.name+mateIndex"
+                :class="Array.isArray(mate.class) ? mate.class : []"
+              >
+                <div class="name">{{mate.name}}</div>
+              </div>
+            </template>
+          </div>
+          <div class="extend_handle" v-if="Array.isArray(tree.children) && tree.children.length"</div>
+        </td>
+      </tr>
+      <tr v-if="Array.isArray(tree.children) && tree.children.length">
+        <td v-for="(children, index) in tree.children" :key="index" colspan="2" class="childLevel">
+          ${this.generateTree(children)}
+        </td>
+      </tr>
+    </table>`;
+  }
+
+  private renderTree(_dialogue: Object): void {
+    this.webviewEditor.webview.html += "<h1>BEGIN<h1>";
+    this.webviewEditor.webview.html += this.generateTree({});
+  }
+
   private setWebviewContents(): void {
     const webview = this.webviewEditor.webview;
     const cspSource = webview.cspSource;
     const obj = factory(this.resource.fsPath);
     const syntaxHighlight = (json: string | Record<string, any>): string => {
       if (typeof json != "string") {
-        json = JSON.stringify(json, undefined, 4);
+        json = JSON.stringify(json, undefined, 2);
       }
       json = json
         .replace(/&/g, "&amp;")
@@ -128,7 +166,7 @@ export class InfinityPreview extends Disposable {
       vscode.workspace.getConfiguration().get("default.font.size"),
     );
 
-    const html: string = `<!DOCTYPE html>
+    this.webviewEditor.webview.html = `<!DOCTYPE html>
     <html dir="ltr" mozdisallowselectionprint>
     <head>
     <meta charset="utf-8">
@@ -199,6 +237,10 @@ export class InfinityPreview extends Disposable {
       <button onclick="decreaseFont()">⬇</button>
     </div>
     <h1>${path.basename(this.resource.path)}</h1>`;
-    this.webviewEditor.webview.html = `${html}<div><pre id="pre" style="font-size:${defaultFontSize}%">${display}<div><pre>`;
+
+    if (path.extname(this.resource.fsPath).replace(".", "") == "dlg") {
+      this.renderTree(obj);
+    }
+    this.webviewEditor.webview.html += `<div><pre id="pre" style="font-size:${defaultFontSize}%">${display}<div><pre>`;
   }
 }

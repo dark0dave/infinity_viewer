@@ -153,9 +153,7 @@ const item_table_parser = new Parser()
   .bit1("stolen")
   .bit1("unstealable")
   .bit1("identified")
-  .seek(function () {
-    return 3;
-  });
+  .seek(3);
 
 const item_slots_parser = new Parser()
   .int16le("helmet")
@@ -225,6 +223,7 @@ const parser = creature_header_parser
     length: "count_of_memorized_spell_table",
     offset: "offset_to_memorized_spell_table",
   })
+  // @ts-ignore
   .saveOffset("currentOffset")
   .seek(function () {
     return this.offset_to_effects - this.currentOffset;
