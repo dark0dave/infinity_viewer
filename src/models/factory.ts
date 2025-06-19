@@ -45,9 +45,11 @@ const model_factory = (extension: String): Parser => {
   }
 };
 
-const getFileContents = (path: fs.PathLike): Buffer => {
+const getFileContents = (file_path: fs.PathLike): Buffer => {
   try {
-    return fs.readFileSync(path, { encoding: null });
+    return fs.readFileSync(path.normalize(file_path.toString()), {
+      encoding: null,
+    });
   } catch (e) {
     console.error(e);
     throw e;
@@ -56,7 +58,10 @@ const getFileContents = (path: fs.PathLike): Buffer => {
 
 const factory = (file_path: fs.PathLike): Object => {
   const buffer = getFileContents(file_path);
-  const extension = path.extname(file_path.toString()).replace(".", "");
+  const extension = path
+    .extname(file_path.toString())
+    .replace(".", "")
+    .toLocaleLowerCase();
   try {
     const parser = model_factory(extension);
     return parser.parse(buffer);
