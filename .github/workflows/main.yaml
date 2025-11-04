@@ -50,7 +50,7 @@ jobs:
       - run: npm run package
       - run: mv infinity-viewer*.vsix infinity-viewer.vsix
       - name: Archive release artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@main
         with:
           name: infinity-viewer.vsix
           path: infinity-viewer.vsix
@@ -71,7 +71,7 @@ jobs:
         run: echo ::set-output name=git_tag::${GITHUB_REF/refs\/tags\//}
       - name: Create Release
         id: create_release
-        uses: ncipollo/release-action@v1.20.0
+        uses: ncipollo/release-action@main
         with:
           generateReleaseNotes: true
           prerelease: ${{ startsWith(steps.get_tag.outputs.git_tag, 'nightly') }}
