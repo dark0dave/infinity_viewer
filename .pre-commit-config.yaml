@@ -37,7 +37,7 @@ repos:
         require_serial: false
 
   - repo: https://github.com/Lucas-C/pre-commit-hooks
-    rev: v1.5.5
+    rev: v1.5.6
     hooks:
       - id: forbid-crlf
         stages: [pre-commit]
@@ -47,7 +47,7 @@ repos:
         require_serial: false
 
   - repo: https://github.com/commitizen-tools/commitizen
-    rev: v4.10.0
+    rev: v4.12.1
     hooks:
       - id: commitizen
         stages: [commit-msg]
