@@ -2,7 +2,7 @@
   description = "";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/2cd3cac16691a933e94276f0a810453f17775c28";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable-small";
   };
 
   outputs = { self, nixpkgs }:
