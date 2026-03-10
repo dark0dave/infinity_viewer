@@ -35,7 +35,7 @@ Support all the other ie binary file types
 
 ### How to build me
 
-- use mise to install latest node
+- use nix flakes and direnv to enable development environment
 
 ```sh
 npm run package

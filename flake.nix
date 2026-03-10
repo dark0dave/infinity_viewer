@@ -1,10 +1,7 @@
 {
-  description = "";
-
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable-small";
   };
-
   outputs = { self, nixpkgs }:
     let
       systems = [ "x86_64-linux" "aarch64-linux" "aarch64-darwin" ];
