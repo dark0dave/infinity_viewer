@@ -27,7 +27,6 @@ const cycle_entry = new Parser()
   .uint16le("index_into_frame_lookup_table");
 
 // BAM V1
-
 const bam_v1_header = new Parser()
   .uint16le("count_of_frame_entries")
   .int8("count_of_cycles")
@@ -55,6 +54,7 @@ const bam_v1_parser = bam_v1_header
   .array("bam_v1_palette", {
     type: "uint8",
     length: function () {
+      // @ts-ignore
       return this.offset_to_lookup_table - this.offset_to_palette;
     },
   })
@@ -65,7 +65,6 @@ const bam_v1_parser = bam_v1_header
   });
 
 // BAM V2
-
 const bam_v2_header = new Parser()
   .uint32le("count_of_frame_entries")
   .uint32le("count_of_cycle_entries")

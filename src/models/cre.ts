@@ -153,9 +153,7 @@ const item_table_parser = new Parser()
   .bit1("stolen")
   .bit1("unstealable")
   .bit1("identified")
-  .seek(function () {
-    return 3;
-  });
+  .seek(3);
 
 const item_slots_parser = new Parser()
   .int16le("helmet")

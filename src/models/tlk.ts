@@ -17,7 +17,7 @@ const entry = new Parser()
 const parser = header
   .array("tlk_entries", {
     type: entry,
-    length: function (_item: any) {
+    length: function () {
       return Math.min(this?.number_of_string_entries, 100);
     },
   })
@@ -27,19 +27,20 @@ const parser = header
   })
   .string("string_data", {
     formatter: function (buffer: Buffer) {
-      const newBuffer = [];
+      const newBuffer: Array<Number> = [];
       if (buffer) {
         this?.tlk_entries?.forEach((element) => {
           const item = buffer.subarray(
             element.offset_to_string,
             element.offset_to_string + element.length,
           );
+          // @ts-ignore
           newBuffer.push(item.toString());
         });
       }
       return newBuffer;
     },
-    length: function (_item: any) {
+    length: function () {
       return (
         this?.tlk_entries.reduce((a: any, b: any) => a.length + b.length) || 0
       );

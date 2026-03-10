@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "module": "Node16",
+    "module": "NodeNext",
     "target": "ES2022",
     "outDir": "out",
     "lib": ["ES2022"],
@@ -9,7 +9,11 @@
       "@/*": ["./src/*"]
     },
     "allowJs": true,
+    "checkJs": false,
     "strict": false,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "noUnusedParameters": true
