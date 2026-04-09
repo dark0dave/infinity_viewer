@@ -4,3 +4,4 @@ out
 *vsix
 .envrc
 .direnv/
+*.js

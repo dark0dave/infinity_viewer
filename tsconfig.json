@@ -2,12 +2,15 @@
   "compilerOptions": {
     "module": "NodeNext",
     "target": "ES2022",
+    "rootDir": "./src",
     "outDir": "out",
     "lib": ["ES2022"],
     "sourceMap": true,
     "paths": {
       "@/*": ["./src/*"]
     },
+    "types": ["mocha"],
+    "typeRoots": ["./node_modules/@types"],
     "allowJs": true,
     "checkJs": false,
     "strict": false,
