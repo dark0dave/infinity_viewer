@@ -38,7 +38,7 @@ Support all the other ie binary file types
 - use nix flakes and direnv to enable development environment
 
 ```sh
-npm run package
+pnpm run package
 ```
 
 The vsix file can then be installed to vscode/vscodium.

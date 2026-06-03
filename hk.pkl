@@ -1,0 +1,44 @@
+amends "package://github.com/jdx/hk/releases/download/v1.45.0/hk@1.45.0#/Config.pkl"
+import "package://github.com/jdx/hk/releases/download/v1.45.0/hk@1.45.0#/Builtins.pkl"
+
+local message = new Mapping<String, Step> {
+  ["check-conventional-commit"] = Builtins.check_conventional_commit
+}
+
+local builtins = new Mapping<String, Step> {
+  ["check-added-large-files"] = Builtins.check_added_large_files
+  ["check-case-conflict"] = Builtins.check_case_conflict
+  ["check-merge-conflict"] = Builtins.check_merge_conflict
+  ["detect-private-key"] = (Builtins.detect_private_key) {
+    exclude = ".envrc.sample"
+  }
+  ["end-of-file-fixer"] = Builtins.newlines
+  ["prettier"] = (Builtins.prettier) {
+    exclude = "*.yaml"
+  }
+  ["trailing-whitespace"] = Builtins.trailing_whitespace
+  ["yamlfmt"] = Builtins.yamlfmt
+}
+local local_hooks = new Mapping<String, Step> {
+  ["pnpm audit"] {
+    fix = "pnpm audit fix --fix"
+  }
+  ["nix fmt"] {
+    fix = "nixfmt flake.nix"
+  }
+}
+hooks {
+  ["commit-msg"] {
+    steps {
+      ...message
+    }
+  }
+  ["pre-commit"] {
+    fix = true
+    stash = "git"
+    steps {
+      ...builtins
+      ...local_hooks
+    }
+  }
+}

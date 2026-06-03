@@ -20,7 +20,7 @@
     "url": "https://github.com/dark0dave/infinity_viewer/issues"
   },
   "engines": {
-    "vscode": "^1.115.0"
+    "vscode": "^1.120.0"
   },
   "extensionKind": [
     "ui"
@@ -130,10 +130,10 @@
   "scripts": {
     "build": "tsc -p ./",
     "compile": "tsc -p ./",
-    "vscode:prepublish": "npm run compile",
-    "package": "rm -f infinity-viewer-*.vsix && vsce package",
-    "deploy": "vsce publish",
-    "test": "npm run package && vscode-test",
+    "vscode:prepublish": "pnpm run compile",
+    "package": "rm -f infinity-viewer-*.vsix && pnpm run compile && vsce package --no-dependencies",
+    "deploy": "pnvsce publish --no-dependencies",
+    "test": "pnpm run package && vscode-test",
     "watch": "tsc -watch -p ./",
     "lint": "prettier -w ."
   },
@@ -142,13 +142,13 @@
   },
   "devDependencies": {
     "@types/mocha": "^10.0.10",
-    "@types/node": "^25.5.2",
-    "@types/vscode": "^1.115.0",
-    "@vscode/test-cli": "^0.0.11",
+    "@types/node": "^25.9.1",
+    "@types/vscode": "^1.120.0",
+    "@vscode/test-cli": "^0.0.12",
     "@vscode/test-electron": "^2.5.2",
-    "@vscode/vsce": "^3.7.1",
-    "mocha": "^11.7.5",
-    "prettier": "^3.8.1",
-    "typescript": "^6.0.2"
+    "@vscode/vsce": "^3.9.1",
+    "mocha": "^11.7.6",
+    "prettier": "^3.8.3",
+    "typescript": "^6.0.3"
   }
 }

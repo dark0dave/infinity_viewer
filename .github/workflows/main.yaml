@@ -10,52 +10,51 @@ concurrency:
   group: ${{ github.ref }}-${{ github.workflow }}
   cancel-in-progress: true
 jobs:
-  pre-commit:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@main
-        with:
-          set-safe-directory: true
-      - uses: actions/setup-python@main
-      - uses: pre-commit/action@main
   test:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         include:
           - os: macos-latest
-            test_cmd: DEBUG=* npm test
+            test_cmd: DEBUG=* pnpm test
           - os: ubuntu-latest
-            test_cmd: DEBUG=* xvfb-run -a npm test
+            test_cmd: DEBUG=* xvfb-run -a pnpm test
           - os: windows-latest
-            test_cmd: DEBUG=* ROOT="../../" npm test
+            test_cmd: DEBUG=* ROOT="../../" pnpm test
     steps:
       - uses: actions/checkout@main
+      - uses: pnpm/action-setup@master
+        with:
+          version: 10
       - uses: actions/setup-node@main
         with:
-          node-version: 22
-          cache: "npm"
-      - run: npm ci
+          node-version: "24"
+          cache: "pnpm"
+      - run: pnpm i
       - run: ${{ matrix.test_cmd }}
         shell: bash
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@main
+      - uses: pnpm/action-setup@master
+        with:
+          version: 10
       - uses: actions/setup-node@main
         with:
-          node-version: 22
-          cache: "npm"
-      - run: npm ci
-      - run: npm run package
+          node-version: "24"
+          cache: "pnpm"
+      - run: pnpm i
+      - run: pnpm run package
       - run: mv infinity-viewer*.vsix infinity-viewer.vsix
       - name: Archive release artifacts
         uses: actions/upload-artifact@main
         with:
           name: infinity-viewer.vsix
           path: infinity-viewer.vsix
+          if-no-files-found: error
   release:
-    needs: [build, test, pre-commit]
+    needs: [build, test]
     runs-on: ubuntu-latest
     if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/')
     outputs:
@@ -98,13 +97,16 @@ jobs:
     if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/')
     steps:
       - uses: actions/checkout@main
+      - uses: pnpm/action-setup@master
+        with:
+          version: 10
       - uses: actions/setup-node@main
         with:
-          node-version: 22
-          cache: "npm"
-      - run: npm ci
-      - run: npm run package
+          node-version: "24"
+          cache: "pnpm"
+      - run: pnpm i
+      - run: pnpm run package
       - name: Publish
-        run: npm run deploy
+        run: pnpm run deploy
         env:
           VSCE_PAT: ${{ secrets.VSCE_PAT }}
