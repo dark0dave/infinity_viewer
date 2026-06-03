@@ -25,7 +25,7 @@ local local_hooks = new Mapping<String, Step> {
   }
   ["nix fmt"] {
     fix = "nixfmt flake.nix"
-  }
+  }t
 }
 hooks {
   ["commit-msg"] {

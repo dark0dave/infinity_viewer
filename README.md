@@ -1,11 +1,12 @@
 # Infinity Viewer
 
-![](https://img.shields.io/badge/javascript-8A2BE2?logo=javascript&style=for-the-badge&logoColor=grey)
+![](https://img.shields.io/badge/typescript-8A2BE2?logo=typescript&style=for-the-badge&logoColor=grey)
 [![](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)](https://github.com/dark0dave/infinity/releases/latest_viewer)
 [![](https://img.shields.io/badge/Windows-0078D6?&style=for-the-badge&logoColor=white&logo=git-for-windows)](https://github.com/dark0dave/infinity_viewer/releases/latest)
 [![](https://img.shields.io/badge/mac%20os-grey?style=for-the-badge&logo=apple&logoColor=white)](https://github.com/dark0dave/infinity/releases/latest_viewer)
 [![](https://img.shields.io/github/actions/workflow/status/dark0dave/infinity_viewer/main.yaml?style=for-the-badge)](https://github.com/dark0dave/infinity/actions_viewer/workflows/main.yaml)
 [![](https://img.shields.io/github/license/dark0dave/infinity_viewer?style=for-the-badge)](./LICENSE)
+<a href="https://hk.jdx.dev"><img src="https://hk.jdx.dev/logo-small.png" width="35" height="28" style="background-color: #585858;">![](https://img.shields.io/badge/hk-purple?style=for-the-badge)</a>
 
 ![](large_icon.png)
 
